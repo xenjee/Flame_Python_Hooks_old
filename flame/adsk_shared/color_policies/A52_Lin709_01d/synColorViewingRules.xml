@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewingRules version="1.0">
+	<default viewTransform="Raw" />
+	<ViewingRule name="Any_Data_Raw" viewTransform="Raw" allowedColorSpaces="Any Data" allowedCSContext="Family" allowedDisplays="Any SDR" allowedDisplaysContext="Family" isActive="On" />
+	<ViewingRule name="Unknown_Raw" viewTransform="Raw" allowedColorSpaces="Unknown" allowedCSContext="Specific" allowedDisplays="Any SDR" allowedDisplaysContext="Family" isActive="On" />
+	<ViewingRule name="Normals" viewTransform="normals_view" allowedColorSpaces="Normals_201605" allowedCSContext="Specific" allowedDisplays="Any SDR" allowedDisplaysContext="Family" isActive="On" />
+	<ViewingRule name="Video_Raw" viewTransform="Raw" allowedColorSpaces="Any Video" allowedCSContext="Family" allowedDisplays="Any SDR" allowedDisplaysContext="Family" isActive="On" />
+	<ViewingRule name="Log_Flat" viewTransform="Raw" allowedColorSpaces="Any Log" allowedCSContext="Family" allowedDisplays="Any SDR" allowedDisplaysContext="Family" isActive="On" />
+	<ViewingRule name="RedLog_RC4_to_Video_a52" viewTransform="RedLog_RC4_to_Video_a52_20170324_222035" allowedColorSpaces="REDlogFilm / REDcolor4" allowedCSContext="Specific" allowedDisplays="Any SDR" allowedDisplaysContext="Family" isActive="On" />
+	<ViewingRule name="Redlog_DC2_to_Video_a52" viewTransform="REDlog_DC2_to_Video_a52_20170324_221911" allowedColorSpaces="REDlogFilm / DRAGONcolor2" allowedCSContext="Specific" allowedDisplays="Any SDR" allowedDisplaysContext="Family" isActive="On" />
+	<ViewingRule name="Alexa_Render" viewTransform="Alexa_rendering" allowedColorSpaces="ARRI LogC" allowedCSContext="Specific" allowedDisplays="Any SDR" allowedDisplaysContext="Family" isActive="On" />
+	<ViewingRule name="Logc_to_Video_a52" viewTransform="Logc_to_Video_a52_20170324_221740" allowedColorSpaces="ARRI LogC" allowedCSContext="Specific" allowedDisplays="Any SDR" allowedDisplaysContext="Family" isActive="On" />
+	<ViewingRule name="LIN_to_Video_a52" viewTransform="LIN_to_Video_a52_20170323_213336" allowedColorSpaces="scene-linear Rec 709/sRGB" allowedCSContext="Specific" allowedDisplays="Any SDR" allowedDisplaysContext="Family" isActive="On" />
+	<ViewingRule name="ACEScg" viewTransform="ACEScg_to_Video_a52_20170326_200956" allowedColorSpaces="ACEScg" allowedCSContext="Specific" allowedDisplays="Any SDR" allowedDisplaysContext="Family" isActive="On" />
+</viewingRules>

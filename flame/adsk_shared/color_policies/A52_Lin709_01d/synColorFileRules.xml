@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules version="1.0">
+	<default colorSpace="Unknown"/>
+	<FilePathRule name="matte_Name_path" extension="*" pattern="*matte*" colorSpace="Matte_201605" />
+	<FilePathRule name="alpha_Name_path" extension="*" pattern="*alpha*" colorSpace="Matte_201605" />
+	<FilePathRule name="ADX10_Name_path" extension="*" pattern="*[aA][dD][xX]10*" colorSpace="Log film scan (ADX)" />
+	<FilePathRule name="VLog_Name_path" extension="*" pattern="*[vV][lL][oO][gG]*" colorSpace="Panasonic V-Log/V-Gamut" />
+	<FilePathRule name="SLog3_Name_path" extension="*" pattern="*[sS][lL][oO][gG]3*" colorSpace="Sony SLog3" />
+	<FilePathRule name="LogC_Name_path" extension="*" pattern="*[lL][oO][gG][cC]*" colorSpace="ARRI LogC" />
+	<FilePathRule name="sRGB_Name_path" extension="*" pattern="*[sS][rR][gG][bB]*" colorSpace="sRGB display" />
+	<FilePathRule name="ACEScg_Name_path" extension="*" pattern="*[aA][cC][eE][sS][cC][gG]*" colorSpace="ACEScg" />
+	<FilePathRule name="Jpeg_sRGB" extension="[jJ][pP][gG]" pattern="*" colorSpace="sRGB display" />
+	<FilePathRule name="Tif_sRGB" extension="[tT][iI][fF]*" pattern="*" colorSpace="sRGB display" />
+	<FilePathRule name="Png_sRGB" extension="[pP][nN][gG]" pattern="*" colorSpace="sRGB display" />
+	<FilePathRule name="Quicktime_Video" extension="[mM][oO][vV]" pattern="*" colorSpace="sRGB display" />
+	<FilePathRule name="HDRI_Lin" extension="[hH][dD][rR]" pattern="*" colorSpace="scene-linear Rec 709/sRGB" />
+	<FilePathRule name="OpenEXR_ext" extension="[eE][xX][rR]" pattern="*" colorSpace="scene-linear Rec 709/sRGB" />
+	<FilePathRule name="DPX_ext" extension="[dD][pP][xX]" pattern="*" colorSpace="ARRI LogC" />
+	<FilePathRule name="Red_r3d_ext" extension="[rR][3][dD]" pattern="*" colorSpace="REDlogFilm / DRAGONcolor2" />
+	<FilePathRule name="Alexa_mxf_ext" extension="[mM][xX][fF]" pattern="*" colorSpace="ARRI LogC" />
+	<FilePathRule name="Alexa_ari_ext" extension="[aA][rR][iI]" pattern="*" colorSpace="ARRI LogC" />
+	<FilePathRule name="Red_naming_convention" extension="*" pattern="*\/[0-9A-Z]+_[0-9A-Z]+_[0-9]*" colorSpace="REDlogFilm / DRAGONcolor2" />
+	<FilePathRule name="Alexa_naming_convention" extension="*" pattern="*\/[0-9A-Z]+_[0-9]+_[0-9A-Z]+" colorSpace="ARRI LogC" />
+	<FilePathRule name="Quicktime_Alexa_Log" extension="[mM][oO][vV]" pattern="*\/[0-9A-Z]+_[0-9]+_[0-9A-Z]+" colorSpace="ARRI LogC" />
+</rules>

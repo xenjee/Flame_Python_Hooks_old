@@ -1,0 +1,1095 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Catalog>
+   <CatalogItem>
+      <CatalogTransformPath>/Volumes/discreet/project/17A223-HP_The_Wolf_2_EXT1/synColor/policy/user_color_spaces/ACEScg_to_Video_a52_20170326_200956.ctf</CatalogTransformPath>
+      <CatalogTransform>
+         <ProcessList version="1.7" id="ACEScg_to_Video_a52_20170326_200956" name="ACEScg_to_Video_a52_20170326_200956">
+            <Description>
+               /Applications/Autodesk/Synergy/SynColor/Shared/transforms/A52_0.1/CTF/From_ACEScg/ACEScg_to_Video__a52.ctf
+            </Description>
+            <InputDescriptor>
+               ACEScg
+            </InputDescriptor>
+            <OutputDescriptor>
+               HD (Rec 709) video
+            </OutputDescriptor>
+            <Info version="2.0">
+               <Category>
+                  <Tags>
+                     <Flame>
+                     </Flame>
+                     <PureView type="SDR video">
+                     </PureView>
+                  </Tags>
+                  <Hierarchy>
+                     User
+                  </Hierarchy>
+                  <UserFacingName>
+                     ACEScg_to_Video_a52
+                  </UserFacingName>
+                  <OriginalRef>
+                     /Applications/Autodesk/Synergy/SynColor/Shared/transforms/A52_0.1/CTF/From_ACEScg/ACEScg_to_Video__a52.ctf
+                  </OriginalRef>
+                  <FunctionalMD5>
+                     7fec4724c837a792dba145d86b4a65b8
+                  </FunctionalMD5>
+               </Category>
+               <InputSpace>
+                  <ShortName>
+                     ACEScg
+                  </ShortName>
+                  <ImageState>
+                     scene
+                  </ImageState>
+                  <ID>
+                     ACEScg
+                  </ID>
+               </InputSpace>
+               <OutputSpace>
+                  <ShortName>
+                     Rec.709 video
+                  </ShortName>
+                  <ImageState>
+                     video
+                  </ImageState>
+                  <ID>
+                     Rec.709 video
+                  </ID>
+               </OutputSpace>
+            </Info>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <ExposureContrast inBitDepth="16f" outBitDepth="16f" style="linear">
+               <ECParams exposure="0" contrast="1" gamma="1" pivot="0.18">
+               </ECParams>
+               <DynamicParameter param="EXPOSURE">
+               </DynamicParameter>
+               <DynamicParameter param="CONTRAST">
+               </DynamicParameter>
+            </ExposureContrast>
+            <Range inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <minInValue>
+                  0
+               </minInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+            </Range>
+            <Matrix inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <LUT1D inBitDepth="16f" outBitDepth="16f" bypass="true" halfDomain="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <Array dim="65536 1">
+               </Array>
+            </LUT1D>
+            <Matrix inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Range inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <minInValue>
+                  -0.36
+               </minInValue>
+               <maxInValue>
+                  1.5
+               </maxInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+               <maxOutValue>
+                  1
+               </maxOutValue>
+            </Range>
+            <LUT1D inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <Array dim="4096 1">
+               </Array>
+            </LUT1D>
+            <Matrix inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Range inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <minInValue>
+                  0
+               </minInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+            </Range>
+            <ACES inBitDepth="16f" outBitDepth="16f" style="Glow10Fwd">
+            </ACES>
+            <ACES inBitDepth="16f" outBitDepth="16f" style="RedMod10Fwd">
+            </ACES>
+            <Range inBitDepth="16f" outBitDepth="16f">
+               <minInValue>
+                  0
+               </minInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+            </Range>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Range inBitDepth="16f" outBitDepth="16f">
+               <minInValue>
+                  0
+               </minInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+            </Range>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <LUT1D inBitDepth="16f" outBitDepth="16f" halfDomain="true">
+               <Array dim="65536 1">
+               </Array>
+            </LUT1D>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 4 3">
+               </Array>
+            </Matrix>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <ACES inBitDepth="16f" outBitDepth="16f" style="DarkToDim10">
+            </ACES>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Range inBitDepth="16f" outBitDepth="16f">
+               <minInValue>
+                  0
+               </minInValue>
+               <maxInValue>
+                  1
+               </maxInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+               <maxOutValue>
+                  1
+               </maxOutValue>
+            </Range>
+            <Gamma inBitDepth="16f" outBitDepth="12i" style="basicRev">
+               <GammaParams gamma="2.4">
+               </GammaParams>
+            </Gamma>
+         </ProcessList>
+      </CatalogTransform>
+   </CatalogItem>
+   <CatalogItem>
+      <CatalogTransformPath>/Volumes/discreet/project/17A223-HP_The_Wolf_2_EXT1/synColor/policy/user_color_spaces/LIN_to_Video_a52_20170323_213336.ctf</CatalogTransformPath>
+      <CatalogTransform>
+         <ProcessList version="1.7" id="LIN_to_Video_a52_20170323_213336" name="LIN_to_Video_a52_20170323_213336" inverseOf="1af06cf9-6654-420d-917a-f2445c81eca9">
+            <Description>
+               /Applications/Autodesk/Synergy/SynColor/Shared/transforms/A52_0.1/CTF/From_LINEAR709/Lin709_to_Video__a52.ctf
+            </Description>
+            <InputDescriptor>
+               scene-linear Rec-709/sRGB RGB
+            </InputDescriptor>
+            <OutputDescriptor>
+               HD (Rec 709) video
+            </OutputDescriptor>
+            <Info version="2.0">
+               <Category>
+                  <Tags>
+                     <Flame>
+                     </Flame>
+                     <PureView type="SDR video">
+                     </PureView>
+                  </Tags>
+                  <Hierarchy>
+                     User
+                  </Hierarchy>
+                  <UserFacingName>
+                     LIN_to_Video_a52
+                  </UserFacingName>
+                  <OriginalRef>
+                     /Applications/Autodesk/Synergy/SynColor/Shared/transforms/A52_0.1/CTF/From_LINEAR709/Lin709_to_Video__a52.ctf
+                  </OriginalRef>
+                  <FunctionalMD5>
+                     9e845f97c3a203ee8f548af248c09bc5
+                  </FunctionalMD5>
+               </Category>
+               <InputSpace>
+                  <ShortName>
+                     scene-linear Rec 709/sRGB
+                  </ShortName>
+                  <ImageState>
+                     scene
+                  </ImageState>
+                  <ID>
+                     scene-linear Rec 709/sRGB
+                  </ID>
+               </InputSpace>
+               <OutputSpace>
+                  <ShortName>
+                     Rec.709 video
+                  </ShortName>
+                  <ImageState>
+                     video
+                  </ImageState>
+                  <ID>
+                     Rec.709 video
+                  </ID>
+               </OutputSpace>
+            </Info>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <ExposureContrast inBitDepth="16f" outBitDepth="16f" style="linear">
+               <ECParams exposure="0" contrast="1" gamma="1" pivot="0.18">
+               </ECParams>
+               <DynamicParameter param="EXPOSURE">
+               </DynamicParameter>
+               <DynamicParameter param="CONTRAST">
+               </DynamicParameter>
+            </ExposureContrast>
+            <Range inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <minInValue>
+                  0
+               </minInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+            </Range>
+            <Matrix inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <LUT1D inBitDepth="16f" outBitDepth="16f" bypass="true" halfDomain="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <Array dim="65536 1">
+               </Array>
+            </LUT1D>
+            <Matrix inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Range inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <minInValue>
+                  -0.36
+               </minInValue>
+               <maxInValue>
+                  1.5
+               </maxInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+               <maxOutValue>
+                  1
+               </maxOutValue>
+            </Range>
+            <LUT1D inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <Array dim="4096 1">
+               </Array>
+            </LUT1D>
+            <Matrix inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Range inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <minInValue>
+                  0
+               </minInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+            </Range>
+            <ACES inBitDepth="16f" outBitDepth="16f" style="Glow10Fwd">
+            </ACES>
+            <ACES inBitDepth="16f" outBitDepth="16f" style="RedMod10Fwd">
+            </ACES>
+            <Range inBitDepth="16f" outBitDepth="16f">
+               <minInValue>
+                  0
+               </minInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+            </Range>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Range inBitDepth="16f" outBitDepth="16f">
+               <minInValue>
+                  0
+               </minInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+            </Range>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <LUT1D inBitDepth="16f" outBitDepth="16f" halfDomain="true">
+               <Array dim="65536 1">
+               </Array>
+            </LUT1D>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 4 3">
+               </Array>
+            </Matrix>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <ACES inBitDepth="16f" outBitDepth="16f" style="DarkToDim10">
+            </ACES>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Range inBitDepth="16f" outBitDepth="16f">
+               <minInValue>
+                  0
+               </minInValue>
+               <maxInValue>
+                  1
+               </maxInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+               <maxOutValue>
+                  1
+               </maxOutValue>
+            </Range>
+            <Gamma inBitDepth="16f" outBitDepth="12i" style="basicRev">
+               <GammaParams gamma="2.4">
+               </GammaParams>
+            </Gamma>
+         </ProcessList>
+      </CatalogTransform>
+   </CatalogItem>
+   <CatalogItem>
+      <CatalogTransformPath>/Volumes/discreet/project/17A223-HP_The_Wolf_2_EXT1/synColor/policy/user_color_spaces/Logc_to_Video_a52_20170324_221740.ctf</CatalogTransformPath>
+      <CatalogTransform>
+         <ProcessList version="1.7" id="Logc_to_Video_a52_20170324_221740" name="Logc_to_Video_a52_20170324_221740">
+            <Description>
+               /Applications/Autodesk/Synergy/SynColor/Shared/transforms/A52_0.1/CTF/From_LOG/LogC_to_Video__a52.ctf
+            </Description>
+            <InputDescriptor>
+               normalized RGB code values
+            </InputDescriptor>
+            <OutputDescriptor>
+               HD (Rec 709) video
+            </OutputDescriptor>
+            <Info version="2.0">
+               <Category>
+                  <Tags>
+                     <Flame>
+                     </Flame>
+                     <PureView type="SDR video">
+                     </PureView>
+                  </Tags>
+                  <Hierarchy>
+                     User
+                  </Hierarchy>
+                  <UserFacingName>
+                     Logc_to_Video_a52
+                  </UserFacingName>
+                  <OriginalRef>
+                     /Applications/Autodesk/Synergy/SynColor/Shared/transforms/A52_0.1/CTF/From_LOG/LogC_to_Video__a52.ctf
+                  </OriginalRef>
+                  <FunctionalMD5>
+                     1e3d6048bc0769573ca7e8ce0b278543
+                  </FunctionalMD5>
+               </Category>
+               <InputSpace>
+                  <ShortName>
+                     ARRI LogC
+                  </ShortName>
+                  <ImageState>
+                     log
+                  </ImageState>
+                  <ID>
+                     ARRI LogC
+                  </ID>
+               </InputSpace>
+               <OutputSpace>
+                  <ShortName>
+                     Rec.709 video
+                  </ShortName>
+                  <ImageState>
+                     video
+                  </ImageState>
+                  <ID>
+                     Rec.709 video
+                  </ID>
+               </OutputSpace>
+            </Info>
+            <LUT1D inBitDepth="10i" outBitDepth="16f">
+               <Array dim="1024 1">
+               </Array>
+            </LUT1D>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <LUT1D inBitDepth="16f" outBitDepth="16f" halfDomain="true">
+               <Array dim="65536 1">
+               </Array>
+            </LUT1D>
+            <ExposureContrast inBitDepth="16f" outBitDepth="16f" style="linear">
+               <ECParams exposure="0" contrast="1" gamma="1" pivot="0.18">
+               </ECParams>
+               <DynamicParameter param="EXPOSURE">
+               </DynamicParameter>
+               <DynamicParameter param="CONTRAST">
+               </DynamicParameter>
+            </ExposureContrast>
+            <Range inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <minInValue>
+                  0
+               </minInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+            </Range>
+            <Matrix inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <LUT1D inBitDepth="16f" outBitDepth="16f" bypass="true" halfDomain="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <Array dim="65536 1">
+               </Array>
+            </LUT1D>
+            <Matrix inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Range inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <minInValue>
+                  -0.36
+               </minInValue>
+               <maxInValue>
+                  1.5
+               </maxInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+               <maxOutValue>
+                  1
+               </maxOutValue>
+            </Range>
+            <LUT1D inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <Array dim="4096 1">
+               </Array>
+            </LUT1D>
+            <Matrix inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Range inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <minInValue>
+                  0
+               </minInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+            </Range>
+            <ACES inBitDepth="16f" outBitDepth="16f" style="Glow10Fwd">
+            </ACES>
+            <ACES inBitDepth="16f" outBitDepth="16f" style="RedMod10Fwd">
+            </ACES>
+            <Range inBitDepth="16f" outBitDepth="16f">
+               <minInValue>
+                  0
+               </minInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+            </Range>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Range inBitDepth="16f" outBitDepth="16f">
+               <minInValue>
+                  0
+               </minInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+            </Range>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <LUT1D inBitDepth="16f" outBitDepth="16f" halfDomain="true">
+               <Array dim="65536 1">
+               </Array>
+            </LUT1D>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 4 3">
+               </Array>
+            </Matrix>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <ACES inBitDepth="16f" outBitDepth="16f" style="DarkToDim10">
+            </ACES>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Range inBitDepth="16f" outBitDepth="16f">
+               <minInValue>
+                  0
+               </minInValue>
+               <maxInValue>
+                  1
+               </maxInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+               <maxOutValue>
+                  1
+               </maxOutValue>
+            </Range>
+            <Gamma inBitDepth="16f" outBitDepth="12i" style="basicRev">
+               <GammaParams gamma="2.4">
+               </GammaParams>
+            </Gamma>
+         </ProcessList>
+      </CatalogTransform>
+   </CatalogItem>
+   <CatalogItem>
+      <CatalogTransformPath>/Volumes/discreet/project/17A223-HP_The_Wolf_2_EXT1/synColor/policy/user_color_spaces/REDlog_DC2_to_Video_a52_20170324_221911.ctf</CatalogTransformPath>
+      <CatalogTransform>
+         <ProcessList version="1.7" id="REDlog_DC2_to_Video_a52_20170324_221911" name="REDlog_DC2_to_Video_a52_20170324_221911">
+            <Description>
+               /Applications/Autodesk/Synergy/SynColor/Shared/transforms/A52_0.1/CTF/From_LOG/RedLog_DC2_to_Video_a52.ctf
+            </Description>
+            <InputDescriptor>
+               normalized code values
+            </InputDescriptor>
+            <OutputDescriptor>
+               HD (Rec 709) video
+            </OutputDescriptor>
+            <Info version="2.0">
+               <Release>
+                  2017.2.74
+               </Release>
+               <Copyright>
+                  Copyright 2017 Autodesk, Inc.  All rights reserved.
+               </Copyright>
+               <Category>
+                  <Hierarchy>
+                     User
+                  </Hierarchy>
+                  <UserFacingName>
+                     REDlog_DC2_to_Video_a52
+                  </UserFacingName>
+                  <Tags>
+                     <Flame>
+                     </Flame>
+                     <PureView type="SDR video">
+                     </PureView>
+                  </Tags>
+                  <OriginalRef>
+                     /Applications/Autodesk/Synergy/SynColor/Shared/transforms/A52_0.1/CTF/From_LOG/RedLog_DC2_to_Video_a52.ctf
+                  </OriginalRef>
+                  <FunctionalMD5>
+                     f0d556bd8a76219f9ad4025ac11a5bba
+                  </FunctionalMD5>
+               </Category>
+               <InputSpace>
+                  <ImageState>
+                     log
+                  </ImageState>
+                  <ShortName>
+                     REDlogFilm / DRAGONcolor2
+                  </ShortName>
+                  <ID>
+                     REDlogFilm / DRAGONcolor2
+                  </ID>
+               </InputSpace>
+               <OutputSpace>
+                  <ImageState>
+                     video
+                  </ImageState>
+                  <ShortName>
+                     Rec.709 video
+                  </ShortName>
+                  <ID>
+                     Rec.709 video
+                  </ID>
+               </OutputSpace>
+            </Info>
+            <Log inBitDepth="12i" outBitDepth="16f" style="logToLin">
+               <LogParams gamma="0.6" refWhite="685" refBlack="95" highlight="1" shadow="0">
+               </LogParams>
+            </Log>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <ExposureContrast inBitDepth="16f" outBitDepth="16f" style="linear">
+               <ECParams exposure="0" contrast="1" gamma="1" pivot="0.18">
+               </ECParams>
+               <DynamicParameter param="EXPOSURE">
+               </DynamicParameter>
+               <DynamicParameter param="CONTRAST">
+               </DynamicParameter>
+            </ExposureContrast>
+            <Range inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <minInValue>
+                  0
+               </minInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+            </Range>
+            <Matrix inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <LUT1D inBitDepth="16f" outBitDepth="16f" bypass="true" halfDomain="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <Array dim="65536 1">
+               </Array>
+            </LUT1D>
+            <Matrix inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Range inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <minInValue>
+                  -0.36
+               </minInValue>
+               <maxInValue>
+                  1.5
+               </maxInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+               <maxOutValue>
+                  1
+               </maxOutValue>
+            </Range>
+            <LUT1D inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <Array dim="4096 1">
+               </Array>
+            </LUT1D>
+            <Matrix inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Range inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <minInValue>
+                  0
+               </minInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+            </Range>
+            <ACES inBitDepth="16f" outBitDepth="16f" style="Glow10Fwd">
+            </ACES>
+            <ACES inBitDepth="16f" outBitDepth="16f" style="RedMod10Fwd">
+            </ACES>
+            <Range inBitDepth="16f" outBitDepth="16f">
+               <minInValue>
+                  0
+               </minInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+            </Range>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Range inBitDepth="16f" outBitDepth="16f">
+               <minInValue>
+                  0
+               </minInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+            </Range>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <LUT1D inBitDepth="16f" outBitDepth="16f" halfDomain="true">
+               <Array dim="65536 1">
+               </Array>
+            </LUT1D>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 4 3">
+               </Array>
+            </Matrix>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <ACES inBitDepth="16f" outBitDepth="16f" style="DarkToDim10">
+            </ACES>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Range inBitDepth="16f" outBitDepth="16f">
+               <minInValue>
+                  0
+               </minInValue>
+               <maxInValue>
+                  1
+               </maxInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+               <maxOutValue>
+                  1
+               </maxOutValue>
+            </Range>
+            <Gamma inBitDepth="16f" outBitDepth="12i" style="basicRev">
+               <GammaParams gamma="2.4">
+               </GammaParams>
+            </Gamma>
+         </ProcessList>
+      </CatalogTransform>
+   </CatalogItem>
+   <CatalogItem>
+      <CatalogTransformPath>/Volumes/discreet/project/17A223-HP_The_Wolf_2_EXT1/synColor/policy/user_color_spaces/RedLog_RC4_to_Video_a52_20170324_222035.ctf</CatalogTransformPath>
+      <CatalogTransform>
+         <ProcessList version="1.7" id="RedLog_RC4_to_Video_a52_20170324_222035" name="RedLog_RC4_to_Video_a52_20170324_222035">
+            <Description>
+               /Applications/Autodesk/Synergy/SynColor/Shared/transforms/A52_0.1/CTF/From_LOG/RedFilmLog_RC4_to_Video__a52.ctf
+            </Description>
+            <InputDescriptor>
+               normalized code values
+            </InputDescriptor>
+            <OutputDescriptor>
+               HD (Rec 709) video
+            </OutputDescriptor>
+            <Info version="2.0">
+               <Category>
+                  <Tags>
+                     <Flame>
+                     </Flame>
+                     <PureView type="SDR video">
+                     </PureView>
+                  </Tags>
+                  <Hierarchy>
+                     User
+                  </Hierarchy>
+                  <UserFacingName>
+                     RedLog_RC4_to_Video_a52
+                  </UserFacingName>
+                  <OriginalRef>
+                     /Applications/Autodesk/Synergy/SynColor/Shared/transforms/A52_0.1/CTF/From_LOG/RedFilmLog_RC4_to_Video__a52.ctf
+                  </OriginalRef>
+                  <FunctionalMD5>
+                     d057c4cfe637cd02bf858e1119ff69e5
+                  </FunctionalMD5>
+               </Category>
+               <InputSpace>
+                  <ShortName>
+                     REDlogFilm / REDcolor4
+                  </ShortName>
+                  <ImageState>
+                     log
+                  </ImageState>
+                  <ID>
+                     REDlogFilm / REDcolor4
+                  </ID>
+               </InputSpace>
+               <OutputSpace>
+                  <ShortName>
+                     Rec.709 video
+                  </ShortName>
+                  <ImageState>
+                     video
+                  </ImageState>
+                  <ID>
+                     Rec.709 video
+                  </ID>
+               </OutputSpace>
+            </Info>
+            <Log inBitDepth="12i" outBitDepth="16f" style="logToLin">
+               <LogParams gamma="0.6" refWhite="685" refBlack="95" highlight="1" shadow="0">
+               </LogParams>
+            </Log>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <ExposureContrast inBitDepth="16f" outBitDepth="16f" style="linear">
+               <ECParams exposure="0" contrast="1" gamma="1" pivot="0.18">
+               </ECParams>
+               <DynamicParameter param="EXPOSURE">
+               </DynamicParameter>
+               <DynamicParameter param="CONTRAST">
+               </DynamicParameter>
+            </ExposureContrast>
+            <Range inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <minInValue>
+                  0
+               </minInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+            </Range>
+            <Matrix inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <LUT1D inBitDepth="16f" outBitDepth="16f" bypass="true" halfDomain="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <Array dim="65536 1">
+               </Array>
+            </LUT1D>
+            <Matrix inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Range inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <minInValue>
+                  -0.36
+               </minInValue>
+               <maxInValue>
+                  1.5
+               </maxInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+               <maxOutValue>
+                  1
+               </maxOutValue>
+            </Range>
+            <LUT1D inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <Array dim="4096 1">
+               </Array>
+            </LUT1D>
+            <Matrix inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Range inBitDepth="16f" outBitDepth="16f" bypass="true">
+               <DynamicParameter param="LOOK_SWITCH">
+               </DynamicParameter>
+               <minInValue>
+                  0
+               </minInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+            </Range>
+            <ACES inBitDepth="16f" outBitDepth="16f" style="Glow10Fwd">
+            </ACES>
+            <ACES inBitDepth="16f" outBitDepth="16f" style="RedMod10Fwd">
+            </ACES>
+            <Range inBitDepth="16f" outBitDepth="16f">
+               <minInValue>
+                  0
+               </minInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+            </Range>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Range inBitDepth="16f" outBitDepth="16f">
+               <minInValue>
+                  0
+               </minInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+            </Range>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <LUT1D inBitDepth="16f" outBitDepth="16f" halfDomain="true">
+               <Array dim="65536 1">
+               </Array>
+            </LUT1D>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 4 3">
+               </Array>
+            </Matrix>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <ACES inBitDepth="16f" outBitDepth="16f" style="DarkToDim10">
+            </ACES>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Matrix inBitDepth="16f" outBitDepth="16f">
+               <Array dim="3 3 3">
+               </Array>
+            </Matrix>
+            <Range inBitDepth="16f" outBitDepth="16f">
+               <minInValue>
+                  0
+               </minInValue>
+               <maxInValue>
+                  1
+               </maxInValue>
+               <minOutValue>
+                  0
+               </minOutValue>
+               <maxOutValue>
+                  1
+               </maxOutValue>
+            </Range>
+            <Gamma inBitDepth="16f" outBitDepth="12i" style="basicRev">
+               <GammaParams gamma="2.4">
+               </GammaParams>
+            </Gamma>
+         </ProcessList>
+      </CatalogTransform>
+   </CatalogItem>
+</Catalog>
