@@ -1,0 +1,144 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf820
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green61\blue204;\red0\green0\blue0;\red255\green255\blue255;
+\red114\green0\blue2;\red9\green76\blue116;\red44\green44\blue44;\red115\green74\blue116;}
+{\*\expandedcolortbl;;\csgenericrgb\c0\c23922\c80000;\csgray\c0;\csgray\c100000;
+\cssrgb\c52941\c0\c0;\cssrgb\c0\c37255\c52941;\cssrgb\c22745\c22745\c22745;\cssrgb\c52941\c37255\c52941;}
+\margl1440\margr1440\vieww17580\viewh10440\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs32 \cf2 FLAME CUSTOM HOOKS\
+\
+- Custom export\
+- Custom UI Action\
+- Config yaml Files (x3):\
+	. 
+\fs28 ProjectPaths_config_result (+ _Layout .py)\
+	. InfoStaff_config_result (+ _Layout .py)\
+	. ExportPresets_result (+ _Layout .py)
+\fs32 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b0\fs24 \cf0 \
+\
+
+\b \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+If you got this as a completely package:\
+\
+
+\b0 The \'91flame\'92 folder contains all scripts in subfolders.\
+Copy this folder in /var/tmp/\
+\
+List of folders contained in \'91flame\'92:\
+\
+- adsk_python\
+- adsk_shared\
+- house_projects\
+- README_INFOS\
+- yaml_to_copy
+\b \
+
+\b0 \
+\
+\
+
+\b Copy yaml folder \
+
+\b0 from: \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf3 \cb4 \CocoaLigature0 /usr/local/lib/python2.7/site-packages/yaml \
+to:\
+/opt/Autodesk/python/2018.1.prxx/lib/python2.7/\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 \cb1 \CocoaLigature1 The config .yaml files
+\b0  are saved by the QT APP (which is created in CustomUIAction.py) available in Flame, in the contextual menu.\
+\
+
+\b \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97
+\b0 \
+\
+
+\b Paths
+\b0 \
+\
+- The hooks are loaded if the path is declared in the OS environment: \
+example:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf3 \cb4 \CocoaLigature0 ~/.bash_profile
+\f0\fs24 \cf0 \cb1 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf5 \CocoaLigature0 export\cf6  DL_PYTHON_HOOK_PATH=\cf7 /var/tmp/flame/adsk_python\cf3 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf5 export\cf6  DL_DEBUG_PYTHON_HOOKS=\cf8 1\
+
+\f0\fs24 \cf0 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 > export_hook_custom.py is now (for me) in /var/tmp/flame/adsk_python\
+> Debug mode is on\
+\
+
+\b \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97
+\b0 \
+\
+
+\b ToDo:
+\b0 \
+\
+CONFIG\
+- Add a behavior if value field not filled properly (no real entry\'92, not an email @ format \'85) > if not test.strip(): print \'93empty!!!\'94 thingy.\
+- Ability to add lines for more individuals (name + email)?\
+- In export_hook_custom >  somewhat make the path to the .yaml config more \'91relative\'92 or extracted from reading in the OS filesystem. (Less hardcoded)\
+> \'91yaml_config_Path\'92 would be extracted rather than hardcoded\
+- Can we add a comment line to the generated .yaml file?\
+\
+HOOK\
+- FEATURE REQUEST: provide a \'91clipName\'92 key for preCustomExport.\
+\
+
+\b \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97
+\b0 \
+\
+
+\b Questions:
+\b0 \
+\
+- Can we add a comment lines (PyYaml) to the generated .yaml file?\
+\
+
+\b \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97
+\b0 \
+\
+
+\b Updates:
+\b0 \
+\
+20170412:\
+- In the UI app: added placeholders and defaults for value fields (path, project, names, emails)\
+ \
+20170414:\
+- Added browse and display \'91 complete path\'92 (for project\'92s root path)\
+- Added browse and display \'91project\'92  (project folder = name)\
+\
+20170415:\
+- Send email when export done: postCustomExport  (using smtplib)\
+\
+20170418:\
+- Print info dictionaries from within each hook > >>\
+	for k, v in info.iteritems():\
+           	print "%-24s: %s" % (k, v)\
+20170521:\
+- Reload the previous (last) state? (reload fields values) > done\
+- Add export path to email content (text)\
+- Export presets, profiles \'85 are now dependent on the various .yaml config files (3 files)\
+- Available export presets are now defined in the ExportPresets TAB in the QT APP. (Which is defined/created in CustomUIAction.py)\
+\
+\
+\
+}
