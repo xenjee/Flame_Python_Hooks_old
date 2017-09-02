@@ -1,0 +1,5 @@
+export_preset01: {name: jpg-Straight, path: /opt/Autodesk/shared/export/presets/sequence_publish/jpg_Straight.xml}
+export_preset02: {name: jpg-LogC to Video, path: /opt/Autodesk/shared/export/presets/sequence_publish/jpg_LogC_to_Video.xml}
+export_preset03: {name: exr-LogC to Lin709, path: /opt/Autodesk/shared/export/presets/sequence_publish/exr_LogC_to_LIN709.xml}
+export_preset04: {name: QT-Straight, path: /opt/Autodesk/shared/export/presets/movie_file/QT_Straight.xml}
+export_preset05: {name: QT-LogC to Video, path: /opt/Autodesk/shared/export/presets/movie_file/QT_LogC_to_Video.xml}
