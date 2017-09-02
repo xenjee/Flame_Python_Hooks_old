@@ -1,0 +1,20 @@
+projects_root_path: /var/tmp/flame/house_projects
+project_name: 17P999_house_exportHook
+
+staff:
+
+  Flame_lead:
+    name: santa klaus
+    email: santa_klaus@internet.com
+
+  cg_lead:
+    name: marie curie
+    email: marie_curie@internet.com
+
+  producer:
+    name: orson wells
+    email: orson_wells@internet.com
+
+  assistants: assistants_alias@internet.com
+
+  team_alias: this_job_alias@internet.com
