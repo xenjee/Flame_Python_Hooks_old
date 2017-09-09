@@ -189,6 +189,7 @@ def customUIAction(info, userData):
 
         # Project root path and project name: browse or type. Saved to ProjectPaths_config_result.yaml
         class PathsTab(QMainWindow, ProjectPaths_layout.Ui_ProjectPathsLayout):
+
             def __init__(self, fileInfo, parent=None):
                 super(PathsTab, self).__init__(parent)
 
@@ -197,9 +198,20 @@ def customUIAction(info, userData):
                 self.browsePath.clicked.connect(self.browse_path)  # When the button is pressed: Execute browse_path function
                 self.browseProject.clicked.connect(self.browse_project)  # When the button is pressed: Execute browse_folder function
 
+# ADDED 20170909 --- For the project path and name to show the actual config when opened ---------
+                yaml_Pathnames_Path = '/var/tmp/flame/adsk_python/apps/utilities/ProjectPaths_config_result.yaml'
+                with open(yaml_Pathnames_Path, 'r') as config1:
+                    cfg1 = yaml.load(config1)
+                projects_root_path = cfg1["projects_root_path"]
+                project_name = cfg1["project_name"]
+############
+
                 # Placeholders and default values
-                self.projectRootPathField.setText("/var/tmp/flame/house_projects/")
-                self.projectNameField.setPlaceholderText("17P000_project_name")
+                # the 2 following lines are replaced by the 2 next (20170909)
+                # self.projectRootPathField.setText("/var/tmp/flame/house_projects/")
+                # self.projectNameField.setPlaceholderText("17P000_project_name")
+                self.projectRootPathField.setText(projects_root_path)
+                self.projectNameField.setPlaceholderText(project_name)
 
             def browse_path(self):
                 self.projectRootPathField.clear()  # In case there are any existing elements in the list
