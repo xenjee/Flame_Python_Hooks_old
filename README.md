@@ -63,7 +63,10 @@ CONFIG
 - In export_hook_custom >  somewhat make the path to the .yaml config more ‘relative’ or extracted from reading in the OS filesystem. (Less hardcoded) >> ‘yaml_config_Path’ would be extracted rather than hardcoded
 
 HOOK
-- FEATURE REQUEST: provide a ‘clipName’ key for preCustomExport.
+- FEATURE REQUESTS: 
+- provide a ‘clipName’ key for preCustomExport.
+- Allow Subfolders to the Custom export menu (like CustomUIaction groups?)
+- A way to sort the list of export presets
 
 ————————————————————————————————————————————————
 
