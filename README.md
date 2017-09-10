@@ -84,7 +84,7 @@ The Ones …_to_Video are also the ones used for viewing rules.
 
 ————————————————————————————————————————————————
 
-Updates:
+UPDATES:
 
 20170909:
 - Project path and name now open showing the actual configuration as opposed to the default placeholder
