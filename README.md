@@ -74,8 +74,13 @@ Questions:
 ————————————————————————————————————————————————
 
 Reminders: 
+
 - On macOS, CTF files must be copied into /Applications/Autodesk/Synergy/SynColor/Shared/transforms
 - On Linux it's in ... (don't remember right now)
+
+These export presets use a set of Custom CTFs. 
+All CTF stacks use a conversion to ACES as a connecting space for the first step, then go down to whatever needed.
+The Ones …_to_Video are also the ones used for viewing rules.
 
 ————————————————————————————————————————————————
 
