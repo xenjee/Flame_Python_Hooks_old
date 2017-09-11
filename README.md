@@ -1,13 +1,17 @@
 # README
-Also look in the wiki section
-
 GNU General Public license v3.0.
 
+————————————————————————————————————————————————
+
+Also look in the wiki section for Flowgraph, Screengrabs ...
+
+————————————————————————————————————————————————
 
 The 'flame' folder is for Autodesk Flame python hooks
 Place it in /var/tmp/
 Read the readme files inside the 'README_INFOS' folder.
 
+————————————————————————————————————————————————
 
 FLAME CUSTOM HOOKS
 
