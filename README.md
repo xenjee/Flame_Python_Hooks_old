@@ -33,11 +33,9 @@ List of folders contained in ‘flame’:
 - yaml_to_copy
 
 
-Copy yaml folder 
-from: 
-/usr/local/lib/python2.7/site-packages/yaml 
-to:
-/opt/Autodesk/python/2018.1.prxx/lib/python2.7/
+Copy yaml folder to:
+/opt/Autodesk/python/[installed version]/lib/python2.7/
+Example: /opt/Autodesk/python/2018.2/lib/python2.7/
 
 
 The config .yaml files are saved by the QT APP (which is created in CustomUIAction.py) available in Flame, in the contextual menu.
