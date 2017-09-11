@@ -1,11 +1,11 @@
 # README
 Also look in the wiki section
 
+GLU license.
+
 The 'flame' folder is for Autodesk Flame python hooks
 Place it in /var/tmp/
 Read the readme files inside the 'README_INFOS' folder.
-
-xenjee@gmail.com
 
 
 FLAME CUSTOM HOOKS
@@ -19,7 +19,7 @@ FLAME CUSTOM HOOKS
 
 ————————————————————————————————————————————————
 
-If you got this as a completely package:
+If you got this as a complete package:
 
 The ‘flame’ folder contains all scripts in subfolders.
 Copy this folder in /var/tmp/
@@ -56,14 +56,11 @@ export DL_DEBUG_PYTHON_HOOKS=1
 ————————————————————————————————————————————————
 
 ToDo:
+Hmmm ...
 
-CONFIG
-- Add a behavior if value field not filled properly (no real entry’, not an email @ format …) > if not test.strip(): print “empty!!!” thingy.
-- Ability to add lines for more individuals (name + email)? ("add" button)
-- In export_hook_custom >  somewhat make the path to the .yaml config more ‘relative’ or extracted from reading in the OS filesystem. (Less hardcoded) >> ‘yaml_config_Path’ would be extracted rather than hardcoded
+————————————————————————————————————————————————
 
-HOOK
-- FEATURE REQUESTS: 
+FEATURE REQUESTS To Autodesk: 
 - provide a ‘clipName’ key for preCustomExport.
 - Allow Subfolders to the Custom export menu (like CustomUIaction groups?)
 - A way to sort the list of export presets
