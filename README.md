@@ -1,7 +1,8 @@
 # README
 Also look in the wiki section
 
-GLU - Generic Public license v3.0.
+GNU General Public license v3.0.
+
 
 The 'flame' folder is for Autodesk Flame python hooks
 Place it in /var/tmp/
