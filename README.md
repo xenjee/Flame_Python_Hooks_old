@@ -3,7 +3,7 @@ GNU General Public license v3.0.
 
 ————————————————————————————————————————————————
 
-Also look in the wiki section for Flowgraph, Screengrabs ...
+Also look in the wiki section for Scripts Flowgraph, Screengrabs ...
 
 ————————————————————————————————————————————————
 
