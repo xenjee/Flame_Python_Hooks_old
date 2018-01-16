@@ -1,0 +1,183 @@
+From fxguide’s forum. Published on: 2002-03-24
+I think it was originally an article named: fxguide tip sheet - particle functions.
+So many thanks to the amazing individuals behind fxguide and their tremendous  work and contributions to the Flame thingy.
+
+—————
+
+Ah yes..... This is what you were looking for!.... in two parts...
+
+\\\\\\\\\\\\\\\"Here is a guide to functions with particles plus 30 free functions
+For a single very well explained example also check out Tip: Simple Vapour Particle System.
+
+Often you need a particle generated in the following way: the particle is generated and over the life time of the particle it should fade in both size and softness. In the real life the further a particle travels from the emitter the softer the effect. Imagine a smoke from a jet fighter, it is strong near the exaust and fades away with distance to a point that it is very soft...with out functions it is very difficult to control such things as the main controls are designed to affect either the whole particle stream or the streams direction. The solution is simple use a particle manipulator with a function. By doing this you can provide a mathematical instruction or direction to each individual particle and thus have far greater control, an example is size. If you vary the size setting it affects all particles at the time of their birth - but not during their life - once they have left the emitter, but if you use the function:
+
+size = lifetimeI * size
+
+
+Now each particle will reduce in size over the course of its natural life. As lifetime can be set with a variation, individual particles will get smaller at different rates. The way this works is by using the resvered key word lifetimeI. This is one of many special keywords that the software provides to allow you to write simple functions for particles. It is perhaps the most powerful also. As it is impossible to know what any one action setup will have as a duration for a particle lifetime, the software takes the maxium life of any one particle and makes a scale of 0 to 1. by doing this you know that lifetimeI will ALWAYS return a value between 0 and 1 depending on how \\\\\\\\\\\\\\\'old\\\\\\\\\\\\\\\' the particle is. This lets us then multiple the particles size by a number that starts at 1 and reduces to 0 at the time of the particles natural death. As particles diminish in size, they will make the stream trail off.
+
+
+Another interesting effect is to have a particle that have a color variation along the stream.
+
+Suppose you need a particle stream that is red near the emitter and orange far from the emitter. So, take the particle emitter and add a particle manipulator to it, using the following function:
+
+green = 10 - 10 * lifetimeI
+
+You should also adjust the color of the particle to full red.
+
+So, as long as time passes for a particle, it will have an increase in the green value, so, it will turn yellow (you will have a stream that is a transition from red to yellow along.
+
+
+Many artists are initially put off by the maths - but it is really simple and it all tends to build around a couple of key concepts
+
+1. LifetimeI - as we have explained knowing the point in a particles life is very very handy
+
+
+2. Like LifetimeI - there are functions that return very useful values, but you need to check the type of number each function returns
+For example, lifetimeI returns a number between 0 and 1, but say position is expressed as a vector or 3 numbers ( x,y,z)
+Note that we didn\\\\\\\\\\\\\\\'t say co-ordinates, because in the world of particles, if you think about it you\\\\\\\\\\\\\\\'ll see that if you give the vector or (x,y,z) of a particles next frame,you are also telling the speed, direction, and a host of other info, since a line drawn between where it is now, and where it is going, is a very concise and powerful way of expression not only location but also direction and speed. It is also damn handy, as 3 numbers (x,y,z) can now be used and linked to a load of other information, such as (r,g,b). So in the FFI particle system most functions and expressions either work in single units such a single number like lifetimeI or transparency, OR they are expressed as 3 numbers such as colour, speed, or position. There are a few functions we use that bridge this world, ie they take a vector and return a number - but on the whole understand just this concept can make life much easier when attempting to write your own functions.
+
+3. \\\\\\\\\\\\\\\"Dummy\\\\\\\\\\\\\\\" Variables - To make your life easy - the nice people at discreet have given us two dummy controls for functions - why ? Well if you think about it - you might want to animate some number in your function and without being able to link to dummy nodes like you can do with expressions, this would be impossible. But by using Power and Magnitude - the 2 dummy variable - you can now either alter an expression or animate one with the channel editor - all without typing or retyping your mathematical expressions. Just think of the Power and Magnitude channels as being Fred and Barney - or A and B - their names mean nothing, but as independent comtrollers - they are there for you to use.
+
+4. Turbulence - Finally there is one very key function that should be mentioned, turbulence - it is very important for a number of reasons, firstly you often want some randomness with particles, secondly it is one of the bridges I mentioned - that takes a vector and returns a number and finally it is very clever in real world simulations - but not obvious to use.
+the syntax of the turbulence function is :
+turbulence( vector, octave)
+Where vector is a number (x,y,z) and octave is a floating number which is sort off equivalent to the number of levels of the turbulence, (there are no integers in this particle language).
+
+To understand how it works - let us first consider noise. There is a function called noise and it returns a sort of random number, we say sort of because given the same question it will reply with the same random number each time ( otherwise our animations would change each render!). How is noise different from turbulence? - well, think of noise as each point in space being completely different from the one next to it.. so colour noise is random with no pattern - just dots. Turbulence is more like star fields - where we see clusters and groupings - so while it is still random - it has patches of dark and light - rather than just being completely random. This is what makes it so valuable. it is like density clouds or wind patterns - and we can use this to simulate natural looks and movements in our particle system.
+
+Ahh you say - no problem - but what is this ocatves thing?
+
+Well imagine I had a distribution of wine in my wine rack in the garage.. there may be some pattern - groups of red and whites, but as I have drunk a few bottles - some holes are full and some holes are empty, which is all fairly random. Standing 5 feet in front of the wine rack looking at the end of the bottles - this would be clear to see.. because I am at the right scale. But what if I stand with my nose pressed up against just one bottle - or 2 miles away - the pattern may not be so easy to see, it is still random but now looks like just plain black or white. Octaves help by changing the turbulence scale - and as with fractals - the turbulence works at different scales, the pattern is different - but the principle and basic concept is the same.
+
+The level number or octave is the number of iterations, ie the number of noise summations. On every simmulation the scale get smaller but the frequency becomes higher. So the higher the level the more change from spatial sample to sample. Try it out, put magnitude in the expression: pos = turbulence3( pos, magnitude) and then just change the magnitude dial and see what happens.
+
+
+By the way, the complexity or processing cost is fairly obvious, multiply is more expensive than add, noise uses many add+mults so way more expensive, turbulence uses several noises so is even more expensive.
+
+
+
+
+
+
+Here are some examples, both simple and complex..... 
+
+(cont.)
+Transparency Functions
+
+transparency = lifetimeI
+simple-fade-off
+(evenly from start)
+
+transparency = (1-lifetimeI)
+simple-fade-up
+(evenly from start)
+
+transparency = sin (lifetimeI)
+approx-fade-off
+
+transparency =sin (lifetimeI*1.5)
+normal-fade-off (over life)
+
+transparency = cos (lifetimeI*1.5)
+normal-fade-up
+
+transparency = sin(lifetimeI*3.14)
+fade-in-out (over life)
+
+transparency = power * ( sin( lifetimeI * 3.14 ) )
+fade-in-out+cnt
+This is better than \"transparency = lifetimeI\" because with the previous formula you would have particles \'pop\' on and then fade. I had some popping occur when I was trying to make smoke from a chimney, but it gave this interesting puffing effect.
+
+transparency = transparency / sin(lifetimeI) * power
+fade-midway+cnt
+fade down in the middle of the particles life, with power control (power is between 0 and 1) (control with power)
+
+transparency = -0.05(pow(tan((lifetimeI-0.5)/0.37, 2)) +1
+fade-up-off-fast
+Produces a very steep up flat top , very steep down curve, no explict control.
+
+transparency = -(magnitude*lifetimeI) (lifetimeI - 1)
+fade-up-out+cnt2 (use magnitude>1)
+
+transparency = 1 - smoothstep(100,400, length(pos-(100,0,500))))
+trans-near-a-point
+In this case only near coordinates 100,0,500 - the old light default location, 100 and 400 define the distances close and far - that limit the transparency. I used this when I wanted rain to light up around a street light, - unlike a matte it works in 3 space, like a ball - when the rain enters the ball it lights up- very nice
+
+transparency=pow(lifetimeI,magnitude)
+fade-off+cnt
+
+transparency = sin(lifetimeI + turbulence(pos,1))
+fade-up-off-random
+A great function that acts more naturally in fading off particles
+
+transparency = ( ((1-lifetimeI)<power)*smoothstep(0,1,(1-lifetimeI)/power)) + (((1-lifetimeI)>=power)*smoothstep(0,1,lifetimeI/(1-damping)) )
+linear-fade-up-off+cnt
+This amazing function allows you to move the mid point of the fadeup/off and effect the out (via damping) try damping = 25% and power =o.5
+
+transparency = (((1-lifetimeI)<power)*(1-lifetimeI)/power) + (((1-lifetimeI)>=power)*lifetimeI/(1-damping))
+linear-fade-up-off+cnt2
+\"fade up to frame\" set by \"power\" -\"fade down from frame\" set by \"damping\" (don\'t use damping values lower than power) -change damping to power if you want it to fade up and down immediately. Try power=0.25, damping=75
+
+
+transparency = (lifetimeI>0.5)*lifetimeI + (lifetimeI<=0.5)*0.5
+hold-then-off
+(lifetimeI>0.5) returns 1 when lifetimeI is greater than 0.5 and zero when lifetimeI is less than 0.5
+and likewise (lifetimeI<=0.5) returns 1 when lifetimeI is less than or equal to 0.5 and zero when lifetimeI is greater than 0.5 thus multiplying the \"then\" and \"else\" functions by their respective conditional expressions and adding them together results in transparency fading down to 0.5 until halfway through the particles life and then remaining at 0.5 till the end....
+
+
+--------------------------------------------------------------------------------
+Colour functions
+
+rgb = (red*lifetimeI, sin(lifetimeI), 25)
+yellow-green-blue
+Colors shift through the range during their life
+
+rgb=(red*lifetimeI, green*pow(lifetimeI,2), 0)
+fire-yellow-red-black
+In Surface/Geometry, keep the diffuse/specular/ambient colours as default (white/white/black). The first frame of the particles will be white, but then jumps to yellow because of the above expression. The green channel drops faster than the red channel, producing orange before red and then black. (tip: great for fire)
+
+rgb=(red*lifetimeI, green*pow(lifetimeI,2),blue*pow(lifetimeI,magnitud e))
+fire-yellow-red-black+cntl
+If you want white to cycle to yellow, you could add an expression in the blue channel that drops very quickly . try magnitude =10
+
+rgb = ((1,0,0)-(0,0,1))*smoothstep(0,1,lifetimeI))+(0,0,1)
+red-purple
+This will make the color go from red-purple,
+
+
+--------------------------------------------------------------------------------
+Turbulence functions
+
+speed = speed + cross ((power, power, power), noise3(pos))
+speed-noise+cnt1
+Changing the power and speed affect the turbulence...try power=3.0
+
+speed = speed + cross ((power, power, power), noise3(pos)) * magnitude
+speed-noise+cnt2
+Changing the power, speed and magnitude all affect the turbulence... * note:In the above two examples, you can achieve some very interesting effects by keyframing the power, speed or magnitude channels. For instance, start out with very little turbulence and then ramp up into something really chaotic!
+
+speed = speed + cross( (power,power,power), turbulence3(pos,1)
+speed-turbulence+cntl1
+Same as above but using turbulence rather than the more \'random\' noise function. note it is turbulence3 as we need the vector version.
+
+speed=(speed+cross(power*((1-lifetimeI)/2), power *((1-lifetimeI)/2), power*((1-lifetimeI)/2)), turbulance3(pos,1)))
+Turbulence 1: Speed is defined as speed = speed + another speed vector ,.. plus it scales down the final vector by lifetime.
+
+speed=(speed+cross((power*(1-(lifetimeI/2)), power*(1-(lifetimeI/2)), power*(1-(lifetimeI/2))), turbulence3(pos,1)))/ (magnitude,magnitude,magnitude)
+Turbulence 2: As the speed is defined as speed = speed + another speed vector ,.. we also need to scale down the final vector. So you need to divide everything by say (magnitude,magnitude,magnitude)
+
+speed=speed*0.95+turbulence3(pos*0.01,1)
+small-turbulence
+When rendering out thisone with let\'s say a full light with 180 spread on it as the generator what you will see are the obvious flows and eddies that the particles move through (use lines to see this, only one manipulator for the function).
+
+speed=speed*0.95+turbulence3((pos+(0,0,frame*20))* 0.01,1)
+small-turbulence2
+In this formula you begin to see the flows and eddies and then they are suddenly disrupted. In the first formula the variables are 0.95 and 0.01. In the second the 20 is also a variable. A lower number should make the swirls evolve at a different rate. The 0.01 value in both lines effects the apparent \"lattice\" scale. A smaller number makes for a bigger lattice, creating bigger/looser swirls. The range for this will be 0.1-0.001.
+
+speed = speed + (sin(lifetimeI/2 + 3*turbulence(pos,1)), sin(lifetimeI/2 + 3*turbulence(pos,1)), sin(lifetimeI/2 + 3*turbulence(pos,1)) )
+small-turbulence3
+
+
+
+Published on: 2002-03-24 (27709 reads) 

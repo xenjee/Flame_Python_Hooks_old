@@ -1,0 +1,5 @@
+export_preset01: {name: Ref no lut, path: /opt/Autodesk/shared/export/presets/sequence_publish/jpg_Straight.xml}
+export_preset02: {name: Ref logC to video, path: /opt/Autodesk/shared/export/presets/sequence_publish/jpg_LogC_to_Video.xml}
+export_preset03: {name: CG LogC to Lin, path: /opt/Autodesk/shared/export/presets/sequence_publish/exr_LogC_to_LIN709.xml}
+export_preset04: {name: Posting from video, path: /opt/Autodesk/shared/export/presets/movie_file/QT_Straight.xml}
+export_preset05: {name: Posting from LogC, path: /opt/Autodesk/shared/export/presets/movie_file/QT_LogC_to_Video.xml}

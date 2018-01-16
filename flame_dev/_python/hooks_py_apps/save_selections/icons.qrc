@@ -1,0 +1,9 @@
+<!DOCTYPE RCC><RCC version="1.0">
+ <qresource>
+	 <file>icons/add_grey1_24dp.png</file>
+	 <file>icons/del_grey1_24dp.png</file>
+	 <file>icons/robot_grey1_24dp.png</file>
+	 <file>icons/save_grey1_24dp.png</file>
+	 <file>icons/load_grey1_24dp.png</file>
+ </qresource>
+ </RCC>
