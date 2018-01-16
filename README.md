@@ -29,10 +29,12 @@ If you got this as a complete package:
 The ‘flame’ folder contains all scripts in subfolders.
 Copy this folder in /var/tmp/
 
-List of folders contained in ‘flame’:
+List of folders contained in ‘flame_dev’:
 
-- adsk_python
-- adsk_shared
+- _hide
+- _python
+- _shared
+- _store	
 - house_projects
 - README_INFOS
 - yaml_to_copy
@@ -40,7 +42,7 @@ List of folders contained in ‘flame’:
 
 Copy yaml folder to:
 /opt/Autodesk/python/[installed version]/lib/python2.7/
-Example: /opt/Autodesk/python/2018.2/lib/python2.7/
+Example: /opt/Autodesk/python/2018.3/lib/python2.7/
 
 
 The config .yaml files are saved by the QT APP (which is created in CustomUIAction.py) available in Flame, in the contextual menu.
@@ -52,10 +54,10 @@ Paths
 - The hooks are loaded if the path is declared in the OS environment: 
 example:
 ~/.bash_profile
-export DL_PYTHON_HOOK_PATH=/var/tmp/flame/adsk_python
+export DL_PYTHON_HOOK_PATH=/opt/flame_dev/_python
 export DL_DEBUG_PYTHON_HOOKS=1
 
-> export_hook_custom.py is now (for me) in /var/tmp/flame/adsk_python
+> export_hook_custom.py is now (for me) in /opt/flame_dev/_python
 > Debug mode is on
 
 ————————————————————————————————————————————————
@@ -90,6 +92,11 @@ The Ones …_to_Video are also the ones used for viewing rules.
 ————————————————————————————————————————————————
 
 UPDATES:
+
+
+20180115:
+- Updated the folder structure and root path to /opt/flame_dev/
+- Added batch functions/scripts/snippets (python API)
 
 20170909:
 - Project path and name now open showing the actual configuration as opposed to the default placeholder
