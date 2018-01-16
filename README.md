@@ -8,8 +8,8 @@ Also look in the wiki section for Scripts Flowgraph, Screengrabs ...
 
 ————————————————————————————————————————————————
 
-The 'flame' folder is for Autodesk Flame python hooks.
-Place it in /var/tmp/
+The 'flame_dev' folder is for Autodesk Flame python hooks.
+Place it in /opt/
 Read the readme files inside the 'README_INFOS' folder.
 
 ————————————————————————————————————————————————
