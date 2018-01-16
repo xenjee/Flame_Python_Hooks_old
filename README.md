@@ -4,7 +4,6 @@ GNU General Public license v3.0.
 ————————————————————————————————————————————————
 
 Also look in the wiki section for Scripts Flowgraph, Screengrabs ...
-> Some of this broke with the 20180115 update. Needs to be fixed.
 
 ————————————————————————————————————————————————
 
