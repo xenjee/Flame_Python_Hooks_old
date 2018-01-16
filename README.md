@@ -27,8 +27,8 @@ FLAME CUSTOM HOOKS
 
 If you got this as a complete package:
 
-The ‘flame’ folder contains all scripts in subfolders.
-Copy this folder in /var/tmp/
+The ‘flame_dev’ folder contains all scripts in subfolders.
+Copy this folder in /opt/
 
 List of folders contained in ‘flame_dev’:
 
