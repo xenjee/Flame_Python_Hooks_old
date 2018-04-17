@@ -13,14 +13,21 @@ Read the readme files inside the 'README_INFOS' folder.
 
 ————————————————————————————————————————————————
 
-FLAME CUSTOM HOOKS
-
+FLAME CUSTOM HOOKS and APPs
 - Custom export
-- Custom UI Action
 - Config yaml Files (x3):
 	. ProjectPaths_config_result (+ _Layout .py)
 	. InfoStaff_config_result (+ _Layout .py)
 	. ExportPresets_result (+ _Layout .py)
+
+- Custom UI Action Apps
+
+OTHER APPS/UTILITIES
+- Snippets: 
+	. Duplicate with input connections
+	. Matte Cleaner Snippet/module/ gizmo
+	. Back to Beauty (reconstructs a CG beauty pass using render layers)
+- Save and Reload Selection (and run snippets from there as well)
 
 ————————————————————————————————————————————————
 
