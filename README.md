@@ -107,8 +107,8 @@ The Ones …_to_Video are also the ones used for viewing rules.
 UPDATES:
 
 20180416:
-Added a flowgraph to the wiki, for the Snippets Apps. 
-Updated the Readme file.
+- Added a flowgraph to the wiki, for the Snippets Apps. 
+- Updated the Readme file.
 
 20180115:
 - Updated the folder structure and root path to /opt/flame_dev/
