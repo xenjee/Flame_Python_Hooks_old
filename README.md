@@ -28,6 +28,12 @@ OTHER APPS/UTILITIES
 	. Matte Cleaner Snippet/module/ gizmo
 	. Back to Beauty (reconstructs a CG beauty pass using render layers)
 - Save and Reload Selection (and run snippets from there as well)
+- Toolkit (expressions cheatsheet ...)
+
+WIRETAP TESTS SCRIPTS
+- Copy clip's path to clipboard (From Lewis Saunders)
+- Clip Metadata (From Michael Tailor)
+- Wiretap test prints: print hostname, list servers, Create timeline. (From Autodesk? Sorry, need to dig in, i don't remember who/where i got this from)
 
 ————————————————————————————————————————————————
 
@@ -100,6 +106,9 @@ The Ones …_to_Video are also the ones used for viewing rules.
 
 UPDATES:
 
+20180416:
+Added a flowgraph to the wiki, for the Snippets Apps. 
+Updated the Readme file.
 
 20180115:
 - Updated the folder structure and root path to /opt/flame_dev/
