@@ -25,13 +25,15 @@ from snippets.matte_cleaner_01a import main as _cleaner
 
 
 ##### SIDE CALLBACKS #####
-# actions_side_callback doesn't seem to be so useful anymore,
-# since actions are called from withing 'setMenu' 'addAction' calls on the 'actions' button.
-# keeping this for a dummy 'open text file' example.
+
 def actions_side_callback(passed_data):
     file_path = '/opt/flame_dev/_python/hooks_py_apps/toolkit/docs/Expressions_particles_reformated.txt'
     print file_path
     sb.call(["open", file_path])
+    '''
+    actions_side_callback doesn't seem to be so useful anymore, since actions are called from withing 'setMenu' 'addAction' calls on the 'actions' button.
+    Keeping this for a dummy 'open text file' example.
+    '''
 
 
 def load_side_callback(passed_data):
@@ -87,11 +89,18 @@ class SelectionsRow(QWidget):
         self.load_button.setFlat(True)
         self.actions_button.setFlat(True)
         self.remove_button.setFlat(True)
-
+        '''
         self.store_button.setIcon(QIcon(':/icons/add_grey1_24dp.png'))
         self.load_button.setIcon(QIcon(':/icons/load_grey1_24dp.png'))
         self.actions_button.setIcon(QIcon(':/icons/robot_grey1_24dp.png'))
         self.remove_button.setIcon(QIcon(':/icons/del_grey1_24dp.png'))
+        '''
+
+        self.store_button.setIcon(QIcon(':/opt/flame_dev/_python/hooks_py_apps/save_selections/icons/add_grey1_24dp.png'))
+        self.load_button.setIcon(QIcon(':/opt/flame_dev/_python/hooks_py_apps/save_selections/icons/load_grey1_24dp.png'))
+        self.actions_button.setIcon(QIcon(':/opt/flame_dev/_python/hooks_py_apps/save_selections/icons/robot_grey1_24dp.png'))
+        self.remove_button.setIcon(QIcon(':/opt/flame_dev/_python/hooks_py_apps/save_selections/icons/del_grey1_24dp.png'))
+
 
        # Popup menu
         self.menu = QtGui.QMenu(self)

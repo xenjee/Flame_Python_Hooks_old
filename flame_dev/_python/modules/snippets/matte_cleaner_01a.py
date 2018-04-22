@@ -7,7 +7,7 @@ def main():
 
     import flame
 
-    selected = flame.batch.current_node
+    selected = flame.batch.current_node.get_value()
     # print selected.attributes
 
     mux_in = flame.batch.create_node("Mux")

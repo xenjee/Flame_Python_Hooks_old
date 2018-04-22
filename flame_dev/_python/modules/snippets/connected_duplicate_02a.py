@@ -8,7 +8,7 @@ def main():
     import flame
 
    ########### DUPLICATE ORIGINAL ###########
-    original = flame.batch.current_node
+    original = flame.batch.current_node.get_value()
     original_type = str(original.type)
 
     duplicate = flame.batch.create_node(original_type.replace("'", ''))
