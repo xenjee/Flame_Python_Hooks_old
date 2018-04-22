@@ -57,14 +57,14 @@ def save_selection(path, data):
     print "from save_selection() print data:", data
 
 
-##### SELECTIONS ROW #####
+##### CREATE SELECTIONS ROW(s) #####
 
 class SelectionsRow(QWidget):
 
     _signal = Signal()
 
     # def __init__(self, name, data, actions_callback, store_callback, row_id, parent=None):
-    def __init__(self, name, data, actions_callback, load_callback, fromFlame, row_id, parent=None):
+    def __init__(self, name, data, actions_callback, load_callback, graphSelected, row_id, parent=None):
 
         super(SelectionsRow, self).__init__(parent=parent)
         self.row_id = row_id
@@ -72,7 +72,7 @@ class SelectionsRow(QWidget):
         self.data = data
         self.actions_callback = actions_callback
         self.load_callback = load_callback
-        self.fromFlame = fromFlame
+        self.graphSelected = graphSelected
 
         self._layout = QHBoxLayout(self)
         self._layout.setSpacing(0)
@@ -132,7 +132,7 @@ class SelectionsRow(QWidget):
 
     def store(self, *args, **kwargs):
         try:
-            self.data = self.fromFlame()
+            self.data = self.graphSelected()
 
             if not self.name.text():
                 self.name.setText('selection_' + str(self.row_id + 1).zfill(2))
@@ -163,7 +163,7 @@ class SelectionsWidget(QWidget):
         self.path = kwargs.get('path')
         ######### Amount of slots decided here: ##########
         self.slots = kwargs.get('slots', 10)
-        self.fromFlame = kwargs.get('fromFlame')
+        self.graphSelected = kwargs.get('graphSelected')
 
         super(SelectionsWidget, self).__init__(parent=kwargs.get('parent'))
 
@@ -208,7 +208,7 @@ class SelectionsWidget(QWidget):
             import flame
             print "CURRENT NODES:", flame.batch.selected_nodes.get_value()
 
-            row = SelectionsRow(entry['name'], entry['data'], actions_side_callback, load_side_callback, self.fromFlame, row_id=i)
+            row = SelectionsRow(entry['name'], entry['data'], actions_side_callback, load_side_callback, self.graphSelected, row_id=i)
 
             row._signal.connect(self.save)  # _signal = Signal() in SelectionsRow()
             self._rows.append(row)  # _rows is declared in SelectionsWidget() __init__
