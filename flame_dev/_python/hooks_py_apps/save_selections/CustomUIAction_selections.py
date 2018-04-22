@@ -37,10 +37,9 @@ def customUIAction(info, userData):
 
         def get_selection():
             import flame
-            return ["" + s.name + "" for s in flame.batch.selected_nodes]
+            return ["" + s.name + "" for s in flame.batch.selected_nodes.get_value()]
 
         yamlpath = '/opt/flame_dev/_python/hooks_py_apps/save_selections/saved_nodes.yaml'
-
 
     #############################################
 

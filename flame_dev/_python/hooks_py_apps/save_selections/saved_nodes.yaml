@@ -6,9 +6,3 @@
   name: All Blur nodes
 - data: [Source02, Source01]
   name: plates
-- data: [mux6, CC]
-  name: selection_05
-- data: [comp1]
-  name: comp
-- data: [mux84, mux85]
-  name: temp

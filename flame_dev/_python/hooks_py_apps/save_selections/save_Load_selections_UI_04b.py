@@ -48,13 +48,13 @@ def load_side_callback(passed_data):
 def load_selections(path):
     with open(path, 'r') as saved_selections:
         return yaml.load(saved_selections)
-        # print yaml.load(saved_selections)
+        print yaml.load(saved_selections)
 
 
 def save_selection(path, data):
     with open(path, 'w') as saved_selections:
         saved_selections.write(yaml.safe_dump(data))
-    # print "from save_selection() print data:", data
+    print "from save_selection() print data:", data
 
 
 ##### SELECTIONS ROW #####
@@ -89,6 +89,7 @@ class SelectionsRow(QWidget):
         self.load_button.setFlat(True)
         self.actions_button.setFlat(True)
         self.remove_button.setFlat(True)
+
         '''
         self.store_button.setIcon(QIcon(':/icons/add_grey1_24dp.png'))
         self.load_button.setIcon(QIcon(':/icons/load_grey1_24dp.png'))
@@ -96,11 +97,10 @@ class SelectionsRow(QWidget):
         self.remove_button.setIcon(QIcon(':/icons/del_grey1_24dp.png'))
         '''
 
-        self.store_button.setIcon(QIcon(':/opt/flame_dev/_python/hooks_py_apps/save_selections/icons/add_grey1_24dp.png'))
-        self.load_button.setIcon(QIcon(':/opt/flame_dev/_python/hooks_py_apps/save_selections/icons/load_grey1_24dp.png'))
-        self.actions_button.setIcon(QIcon(':/opt/flame_dev/_python/hooks_py_apps/save_selections/icons/robot_grey1_24dp.png'))
-        self.remove_button.setIcon(QIcon(':/opt/flame_dev/_python/hooks_py_apps/save_selections/icons/del_grey1_24dp.png'))
-
+        self.store_button.setIcon(QIcon('/opt/flame_dev/_python/hooks_py_apps/save_selections/icons/add_grey1_24dp.png'))
+        self.load_button.setIcon(QIcon('/opt/flame_dev/_python/hooks_py_apps/save_selections/icons/load_grey1_24dp.png'))
+        self.actions_button.setIcon(QIcon('/opt/flame_dev/_python/hooks_py_apps/save_selections/icons/robot_grey1_24dp.png'))
+        self.remove_button.setIcon(QIcon('/opt/flame_dev/_python/hooks_py_apps/save_selections/icons/del_grey1_24dp.png'))
 
        # Popup menu
         self.menu = QtGui.QMenu(self)
@@ -206,7 +206,7 @@ class SelectionsWidget(QWidget):
                 entry = {'name': '', 'data': []}
 
             import flame
-            print "CURRENT NODES:", flame.batch.selected_nodes
+            print "CURRENT NODES:", flame.batch.selected_nodes.get_value()
 
             row = SelectionsRow(entry['name'], entry['data'], actions_side_callback, load_side_callback, self.fromFlame, row_id=i)
 
