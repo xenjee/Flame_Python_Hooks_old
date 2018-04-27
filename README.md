@@ -14,12 +14,12 @@ export DL_PYTHON_HOOK_PATH=/opt/flame_dev/_python, or export DL_PYTHON_HOOK_PATH
 
 List of folders contained in ‘flame_dev’:
 
-. _python
-. __init__.py
-. _shared	
-. house_projects
-. README_INFOS
-. test_init_file_for_path.py
+- _python
+- __init__.py
+- _shared	
+- house_projects
+- README_INFOS
+- test_init_file_for_path.py
 
 ————————————————————————————————————————————————
 
