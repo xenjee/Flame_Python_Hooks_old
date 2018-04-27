@@ -76,14 +76,14 @@ FEATURE REQUESTS To Autodesk:
 
 Questions:
 
-- Can we add a comment lines (PyYaml) to the generated .yaml file?
+- many
 
 ————————————————————————————————————————————————
 
 Reminders: 
 
 - On macOS, CTF files must be copied into /Applications/Autodesk/Synergy/SynColor/Shared/transforms
-- On Linux it's in ... (don't remember right now)
+- On Linux it's in opt/autodesk/synergy/syncolor ... (not in front now, but it should be close, sorry)
 
 These export presets use a set of Custom CTFs. 
 All CTF stacks use a conversion to ACES as a connecting space for the first step, then go down to whatever needed.
