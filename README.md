@@ -15,7 +15,7 @@ export DL_PYTHON_HOOK_PATH=/opt/flame_dev/_python, or export DL_PYTHON_HOOK_PATH
 List of folders contained in ‘flame_dev’:
 
 - _python
-- "__init__.py"
+- _ _init__.py (remove extra space between the 2 first undersores: formating issue)
 - _shared	
 - house_projects
 - README_INFOS
@@ -92,6 +92,12 @@ The Ones …_to_Video are also the ones used for viewing rules.
 ————————————————————————————————————————————————
 
 UPDATES:
+
+20180426:
+- Trying to make _python the top module.
+- Added a _init__.py root in _python containing a def to get the absolute part of paths further used.
+- modified all scripts so every path is a combination of what "def get_absolute_path_part():" returns and various combined relative paths.
+The whole thing should now be more portable, simply adding the path to _python to the env PATH
 
 20180416:
 - Added a flowgraph to the wiki, for the Snippets Apps. 
