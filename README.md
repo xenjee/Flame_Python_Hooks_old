@@ -42,7 +42,7 @@ WIRETAP TESTS SCRIPTS
 If you got this as a complete package:
 
 The ‘flame_dev’ folder contains all scripts in subfolders.
-Place it anywhere on your system and add the "python" subfolder to your PATH:
+Place it anywhere on your system and add the "_python" subfolder to your PATH:
 Something like: 
 export DL_PYTHON_HOOK_PATH=/opt/flame_dev/_python
 
