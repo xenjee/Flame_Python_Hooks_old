@@ -8,7 +8,7 @@ Also look in the wiki section for Scripts Flowgraph, Screengrabs ...
 ————————————————————————————————————————————————
 
 The 'flame_dev' folder is for Autodesk Flame python hooks.
-Place it anywhere on your system and add the "_python" subfolder to your PATH, something like: export DL_PYTHON_HOOK_PATH=/opt/flame_dev/_python.
+Place it anywhere on your system and add the "_python" subfolder to your PATH, something like: export DL_PYTHON_HOOK_PATH=/opt/flame_dev/_python, or export DL_PYTHON_HOOK_PATH=/var/tmp/_python ...
 
 There are more readme files inside the 'README_INFOS' folder.
 
