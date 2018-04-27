@@ -1,9 +1,0 @@
-<!DOCTYPE RCC><RCC version="1.0">
- <qresource>
-	 <file>icons/snippet01-icon.png</file>
-	 <file>icons/snippet02-icon.png</file>
-	 <file>icons/snippet03-icon.png</file>
-	 <file>icons/snippet04-icon.png</file>
-	 <file>icons/exit-icon.png</file>
- </qresource>
- </RCC>
