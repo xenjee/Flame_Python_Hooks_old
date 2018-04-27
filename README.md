@@ -7,10 +7,19 @@ Also look in the wiki section for Scripts Flowgraph, Screengrabs ...
 
 ————————————————————————————————————————————————
 
-The 'flame_dev' folder is for Autodesk Flame python hooks.
-Place it anywhere on your system and add the "_python" subfolder to your PATH, something like: export DL_PYTHON_HOOK_PATH=/opt/flame_dev/_python, or export DL_PYTHON_HOOK_PATH=/var/tmp/_python ...
+The ‘flame_dev’ folder contains all scripts and infos in subfolders.
+Place it anywhere on your system and add the "_python" subfolder to your env PATH:
+Something like this (on mac): 
+export DL_PYTHON_HOOK_PATH=/opt/flame_dev/_python, or export DL_PYTHON_HOOK_PATH=/var/tmp/_python ...
 
-There are more readme files inside the 'README_INFOS' folder.
+List of folders contained in ‘flame_dev’:
+
+. _python
+. __init__.py
+. _shared	
+. house_projects
+. README_INFOS
+. test_init_file_for_path.py
 
 ————————————————————————————————————————————————
 
@@ -36,32 +45,7 @@ WIRETAP TESTS SCRIPTS
 - Clip Metadata (From Michael Tailor)
 - Wiretap test prints: print hostname, list servers, Create timeline. (From Autodesk? Sorry, need to dig in, i don't remember who/where i got this from)
 
-————————————————————————————————————————————————
 
-If you got this as a complete package:
-
-The ‘flame_dev’ folder contains all scripts in subfolders.
-Place it anywhere on your system and add the "_python" subfolder to your PATH:
-Something like: 
-export DL_PYTHON_HOOK_PATH=/opt/flame_dev/_python
-
-List of folders contained in ‘flame_dev’:
-
-- _hide
-- _python
-- _shared
-- _store	
-- house_projects
-- README_INFOS
-- yaml_to_copy
-
-
-Copy yaml folder to:
-/opt/Autodesk/python/[installed version]/lib/python2.7/
-Example: /opt/Autodesk/python/2018.3/lib/python2.7/
-
-
-The config .yaml files are saved by the QT APP (which is created in CustomUIAction.py) available in Flame, in the contextual menu.
 
 ————————————————————————————————————————————————
 
