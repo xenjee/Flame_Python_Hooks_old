@@ -5,16 +5,16 @@
 
 from PySide.QtGui import QApplication
 import sys
-import yaml
 
 # UI
-import save_Load_selections_UI_04b
-reload(save_Load_selections_UI_04b)
+import save_Load_selections_UI_04c
+reload(save_Load_selections_UI_04c)
 from save_Load_selections_UI_04c import SelectionsWidget
 
 # Modules Paths
-sys.path.append('/Users/stefan/XenDrive/___VFX/DEV/PYTHON/Modules')
+# sys.path.append('/Users/stefan/XenDrive/___VFX/DEV/PYTHON/Modules')
 sys.path.append('/opt/flame_dev/_python/modules')
+#import yaml
 
 
 # Contextuel Menu Entry
@@ -44,7 +44,7 @@ def customUIAction(info, userData):
     #############################################
 
         app = QApplication.activePopupWidget()
-        # we call 'save_Load_selections_UI_04b.py' giving it 2 args:
+        # we call 'save_Load_selections_UI_04c.py' giving it 2 args:
         # -> the path to the yaml file and the selected nodes list
         form = SelectionsWidget(path=yamlpath, graphSelected=get_selection)
         form.show()

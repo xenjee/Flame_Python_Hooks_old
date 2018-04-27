@@ -1,6 +1,6 @@
 staff:
-  producer: {email: stefan@pulsevfx.com, name: Stefan Prod2}
+  producer: {email: stefan@pulsevfx.com, name: Stefan Prod}
   project_2d_lead: {email: '', name: ''}
   project_3d_lead: {email: '', name: ''}
-  project_lead: {email: xenjee@gmail.com, name: Stefan Lead2}
+  project_lead: {email: xenjee@gmail.com, name: Stefan Lead}
   vfx_team: {email: '', name: ''}

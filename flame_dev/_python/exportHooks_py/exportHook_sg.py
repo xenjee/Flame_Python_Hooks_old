@@ -30,9 +30,13 @@
 # -----------------------------------------------------------------
 
 # Import 'os' and module for filesystem access
+import sys
 import os
-import yaml
+#import yaml
 import smtplib
+
+sys.path.append('/opt/flame_dev/_python/modules')
+import yaml
 
 
 # --------------
@@ -75,7 +79,7 @@ passmot = cfg3["whatIneed"]
 # Export Presets (path and name) from yaml config File (ExportPresets_result.yaml)
 # later used to define what which export preset is available in from the contextual menu (custom exports)
 # Also used to define profiles in 'getCustomExportProfiles' function.
-# Also used for emails parametres. 
+# Also used for emails parametres.
 export_preset01_name = cfg4["export_preset01"]["name"]
 export_preset01_path = cfg4["export_preset01"]["path"]
 export_preset02_name = cfg4["export_preset02"]["name"]
@@ -270,7 +274,7 @@ def postCustomExport(info, userData):
     server.starttls()  # >>>>>> ToDo: search for non TLS emails
     server.login("xenjee@gmail.com", passmot)
 
-    # Using ExportPresets_result.yaml extracted values again. 
+    # Using ExportPresets_result.yaml extracted values again.
     # Subjects and Text are Attached as a header
 
     if userData['exportType'] == export_preset01_name:

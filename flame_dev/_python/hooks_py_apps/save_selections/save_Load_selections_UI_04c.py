@@ -12,12 +12,13 @@ from PySide import QtGui
 import sys
 import os
 import traceback
-import yaml
+#import yaml
 import subprocess as sb
 
 # Modules Paths
-sys.path.append('/Users/stefan/XenDrive/___VFX/DEV/PYTHON/Modules')
+# sys.path.append('/Users/stefan/XenDrive/___VFX/DEV/PYTHON/Modules')
 sys.path.append('/opt/flame_dev/_python/modules')
+import yaml
 
 # Snippets
 from snippets.connected_duplicate_02a import main as _dupli
