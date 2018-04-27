@@ -12,7 +12,7 @@ Place it anywhere on your system and add the "_python" subfolder to your env PAT
 Something like this (on mac): 
 export DL_PYTHON_HOOK_PATH=/opt/flame_dev/_python, or export DL_PYTHON_HOOK_PATH=/var/tmp/_python ...
 
-List of folders contained in ‘flame_dev’:
+List of folders and files contained in ‘flame_dev’:
 
 - _python
 - _ _init__.py (remove extra space between the 2 first undersores: formating issue)
