@@ -11,10 +11,13 @@ import save_Load_selections_UI_04c
 reload(save_Load_selections_UI_04c)
 from save_Load_selections_UI_04c import SelectionsWidget
 
+# inherit absolute part of the path from the __init__.py file
+from __init__ import get_absolute_path_part
+ROOT_PATH = get_absolute_path_part()
+
 # Modules Paths
-# sys.path.append('/Users/stefan/XenDrive/___VFX/DEV/PYTHON/Modules')
-sys.path.append('/opt/flame_dev/_python/modules')
-#import yaml
+#sys.path.append('/opt/flame_dev/_python/modules')
+sys.path.append("{root}/_python/modules".format(root=ROOT_PATH))
 
 
 # Contextuel Menu Entry
@@ -39,7 +42,8 @@ def customUIAction(info, userData):
             import flame
             return ["" + s.name + "" for s in flame.batch.selected_nodes.get_value()]
 
-        yamlpath = '/opt/flame_dev/_python/hooks_py_apps/save_selections/saved_nodes.yaml'
+        #yamlpath = '/opt/flame_dev/_python/hooks_py_apps/save_selections/saved_nodes.yaml'
+        yamlpath = "{root}/_python/hooks_py_apps/save_selections/saved_nodes.yaml".format(root=ROOT_PATH)
 
     #############################################
 

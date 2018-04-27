@@ -17,8 +17,14 @@ from PySide.QtGui import *
 print '-' * 80
 print 'In customUIAction Hook:'
 
+
+# inherit absolute part of the path from the __init__.py file
+from __init__ import get_absolute_path_part
+ROOT_PATH = get_absolute_path_part()
+
 # Import the current config. Will be used later to setText (fileFullPath) in the ExportPresetsTab class
-yaml_export_presets = '/opt/flame_dev/_python/hooks_py_apps/utilities/ExportPresets_result.yaml'
+#yaml_export_presets = '/opt/flame_dev/_python/hooks_py_apps/utilities/ExportPresets_result.yaml'
+yaml_export_presets = "{root}/_python/hooks_py_apps/utilities/ExportPresets_result.yaml".format(root=ROOT_PATH)
 
 with open(yaml_export_presets, 'r') as config:
     cfg = yaml.load(config)
@@ -124,7 +130,8 @@ def customUIAction(info, userData):
                 self.browseProject.clicked.connect(self.browse_project)  # When the button is pressed: Execute browse_folder function
 
 # ADDED 20170909 --- For the project path and name to show the actual config when opened ---------
-                yaml_Pathnames_Path = '/opt/flame_dev/_python/hooks_py_apps/utilities/ProjectPaths_config_result.yaml'
+                #yaml_Pathnames_Path = '/opt/flame_dev/_python/hooks_py_apps/utilities/ProjectPaths_config_result.yaml'
+                yaml_Pathnames_Path = "{root}/_python/hooks_py_apps/utilities/ProjectPaths_config_result.yaml".format(root=ROOT_PATH)
                 with open(yaml_Pathnames_Path, 'r') as config1:
                     cfg1 = yaml.load(config1)
                 projects_root_path = cfg1["projects_root_path"]
@@ -164,7 +171,8 @@ def customUIAction(info, userData):
                     'project_name': self.projectNameField.text(),
 
                 }
-                with open('/opt/flame_dev/_python/hooks_py_apps/utilities/ProjectPaths_config_result.yaml', 'w') as export_hook_config:
+                #with open('/opt/flame_dev/_python/hooks_py_apps/utilities/ProjectPaths_config_result.yaml', 'w') as export_hook_config:
+                with open("{root}/_python/hooks_py_apps/utilities/ProjectPaths_config_result.yaml".format(root=ROOT_PATH), 'w') as export_hook_config:
                     export_hook_config.write(yaml.safe_dump(data))
 
         # Choose a set of export presets to be available in the Flame contextual menu.
@@ -258,7 +266,8 @@ def customUIAction(info, userData):
                         'name': self.preset05NameField.text(),
                     }
                 }
-                with open('/opt/flame_dev/_python/hooks_py_apps/utilities/ExportPresets_result.yaml', 'w') as Export_Presets_config:
+                #with open('/opt/flame_dev/_python/hooks_py_apps/utilities/ExportPresets_result.yaml', 'w') as Export_Presets_config:
+                with open("{root}/_python/hooks_py_apps/utilities/ExportPresets_result.yaml".format(root=ROOT_PATH), 'w') as Export_Presets_config:
                     Export_Presets_config.write(yaml.safe_dump(data))
 
         # Gives a set of names and emails that will conditionaly chosen (per export type, from 'export presets types') from within the custom export hook
@@ -309,7 +318,8 @@ def customUIAction(info, userData):
                     }
 
                 }
-                with open('/opt/flame_dev/_python/hooks_py_apps/utilities/InfoStaff_config_result.yaml', 'w') as InfoStaff_config:
+                #with open('/opt/flame_dev/_python/hooks_py_apps/utilities/InfoStaff_config_result.yaml', 'w') as InfoStaff_config:
+                with open("{root}/_python/hooks_py_apps/utilities/InfoStaff_config_result.yaml".format(root=ROOT_PATH), 'w') as InfoStaff_config:
                     InfoStaff_config.write(yaml.safe_dump(data))
 
         tabdialog = TabDialog()

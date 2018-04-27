@@ -35,7 +35,13 @@ import os
 #import yaml
 import smtplib
 
-sys.path.append('/opt/flame_dev/_python/modules')
+
+# inherit absolute part of the path from the __init__.py file
+from __init__ import get_absolute_path_part
+ROOT_PATH = get_absolute_path_part()
+
+# sys.path.append('/opt/flame_dev/_python/modules')
+sys.path.append("{root}/_python/modules".format(root=ROOT_PATH))
 import yaml
 
 
@@ -44,10 +50,14 @@ import yaml
 
 # >>>>>>>>>>>>>>>> HARDCODED PATH for yaml file !!! >>>>>>>>>>>>>>>>>>>>
 
-yaml_Pathnames_Path = '/opt/flame_dev/_python/hooks_py_apps/utilities/ProjectPaths_config_result.yaml'
-yaml_Staff = '/opt/flame_dev/_python/hooks_py_apps/utilities/InfoStaff_config_result.yaml'
+#yaml_Pathnames_Path = '/opt/flame_dev/_python/hooks_py_apps/utilities/ProjectPaths_config_result.yaml'
+yaml_Pathnames_Path = "{root}/_python/hooks_py_apps/utilities/ProjectPaths_config_result.yaml".format(root=ROOT_PATH)
+#yaml_Staff = '/opt/flame_dev/_python/hooks_py_apps/utilities/InfoStaff_config_result.yaml'
+yaml_Staff = "{root}/_python/hooks_py_apps/utilities/InfoStaff_config_result.yaml".format(root=ROOT_PATH)
 yamlGmail = '/Users/stefan/Dropbox/STEF/yaml_gmail/yamlGmail.yaml'
-yaml_export_presets = '/opt/flame_dev/_python/hooks_py_apps/utilities/ExportPresets_result.yaml'
+#yaml_export_presets = '/opt/flame_dev/_python/hooks_py_apps/utilities/ExportPresets_result.yaml'
+yaml_export_presets = "{root}/_python/hooks_py_apps/utilities/ExportPresets_result.yaml".format(root=ROOT_PATH)
+
 
 with open(yaml_Pathnames_Path, 'r') as config1:
     cfg1 = yaml.load(config1)

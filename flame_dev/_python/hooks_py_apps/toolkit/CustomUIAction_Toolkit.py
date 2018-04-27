@@ -1,6 +1,10 @@
 import os
 import subprocess as sb
 
+# inherit absolute part of the path from the __init__.py file
+from __init__ import get_absolute_path_part
+ROOT_PATH = get_absolute_path_part()
+
 
 def getCustomUIActions():
 
@@ -33,7 +37,8 @@ def customUIAction(info, userData):
 
         # def expressions_sheet1():
 
-        file_path = '/opt/flame_dev/_python/hooks_py_apps/toolkit/docs/Expressions_particles_reformated.txt'
+        #file_path = '/opt/flame_dev/_python/hooks_py_apps/toolkit/docs/Expressions_particles_reformated.txt'
+        file_path = "{root}/_python/hooks_py_apps/toolkit/docs/Expressions_particles_reformated.txt".format(root=ROOT_PATH)
         print file_path
         print "-" * 20
         sb.call(["open", file_path])

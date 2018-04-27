@@ -6,3 +6,7 @@
   name: All Blur nodes
 - data: [Source02, Source01]
   name: plates
+- data: [CC]
+  name: selection_05
+- data: [mux3]
+  name: selection_06
