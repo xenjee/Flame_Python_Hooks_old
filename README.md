@@ -15,11 +15,9 @@ export DL_PYTHON_HOOK_PATH=/opt/flame_dev/_python, or export DL_PYTHON_HOOK_PATH
 List of folders and files contained in ‘flame_dev’:
 
 - _python
-- _ _init__.py (double '_' formating issue)
 - _shared	
 - house_projects
 - README_INFOS
-- test_init_file_for_path.py
 
 ————————————————————————————————————————————————
 
@@ -54,7 +52,7 @@ Paths
 - The hooks are loaded if the path is declared in the OS environment: 
 example:
 ~/.bash_profile
-export DL_PYTHON_HOOK_PATH=/opt/flame_dev/_python
+export DL_PYTHON_HOOK_PATH=/opt/flame_dev
 export DL_DEBUG_PYTHON_HOOKS=1
 
 > export_hook_custom.py is now (for me) in /opt/flame_dev/_python
@@ -92,6 +90,11 @@ The Ones …_to_Video are also the ones used for viewing rules.
 ————————————————————————————————————————————————
 
 UPDATES:
+
+20180427:
+Changed how the Absolute path part of filepaths is extracted:
+- removed the init.py file from _python (i did it all wrong)
+- added the file's path extraction and extrapolations in every script instead.
 
 20180426:
 - Trying to make _python the top module.
