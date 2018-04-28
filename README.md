@@ -93,7 +93,7 @@ UPDATES:
 
 20180427:
 Changed how the Absolute path part of filepaths is extracted:
-- removed the init.py file from _python (i did it all wrong)
+- removed the init.py file from _python (i had done it all wrong)
 - added the file's path extraction and extrapolations in every script instead.
 
 20180426:
