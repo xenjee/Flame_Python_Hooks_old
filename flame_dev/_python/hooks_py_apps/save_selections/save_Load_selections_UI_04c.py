@@ -15,13 +15,13 @@ import traceback
 #import yaml
 import subprocess as sb
 
-# inherit absolute part of the path from the __init__.py file
-from __init__ import get_absolute_path_part
-ROOT_PATH = get_absolute_path_part()
-
-# Modules Paths
-# sys.path.append('/opt/flame_dev/_python/modules')
-sys.path.append("{root}/_python/modules".format(root=ROOT_PATH))
+# turn the relative __file__ value into it's full path
+absolute_path = os.path.realpath(__file__)
+# Use the os module to split the filepath using '/' as a seperator to creates a list from which we pick IDs []
+root_path = '/'.join(absolute_path.split('/')[0:-4])
+# navigate down to the desired folder
+sys.path.append("{root}/_python/modules".format(root=root_path))
+#print "{root}/_python/modules".format(root=root_path)
 import yaml
 
 
@@ -34,7 +34,7 @@ from snippets.matte_cleaner_01a import main as _cleaner
 
 def actions_side_callback(passed_data):
     #file_path = '/opt/flame_dev/_python/hooks_py_apps/toolkit/docs/Expressions_particles_reformated.txt'
-    file_path = "{root}/_python/hooks_py_apps/toolkit/docs/Expressions_particles_reformated.txt".format(root=ROOT_PATH)
+    file_path = "{root}/_python/hooks_py_apps/toolkit/docs/Expressions_particles_reformated.txt".format(root=root_path)
 
     print file_path
     sb.call(["open", file_path])
@@ -105,14 +105,10 @@ class SelectionsRow(QWidget):
         self.remove_button.setIcon(QIcon(':/icons/del_grey1_24dp.png'))
         '''
 
-        #self.store_button.setIcon(QIcon('/opt/flame_dev/_python/hooks_py_apps/save_selections/icons/add_grey1_24dp.png'))
-        self.store_button.setIcon(QIcon("{root}/_python/hooks_py_apps/save_selections/icons/add_grey1_24dp.png".format(root=ROOT_PATH)))
-        #self.load_button.setIcon(QIcon('/opt/flame_dev/_python/hooks_py_apps/save_selections/icons/load_grey1_24dp.png'))
-        self.load_button.setIcon(QIcon("{root}/_python/hooks_py_apps/save_selections/icons/load_grey1_24dp.png".format(root=ROOT_PATH)))
-        #self.actions_button.setIcon(QIcon('/opt/flame_dev/_python/hooks_py_apps/save_selections/icons/robot_grey1_24dp.png'))
-        self.actions_button.setIcon(QIcon("{root}/_python/hooks_py_apps/save_selections/icons/robot_grey1_24dp.png".format(root=ROOT_PATH)))
-        #self.remove_button.setIcon(QIcon('/opt/flame_dev/_python/hooks_py_apps/save_selections/icons/del_grey1_24dp.png'))
-        self.remove_button.setIcon(QIcon("{root}/_python/hooks_py_apps/save_selections/icons/del_grey1_24dp.png".format(root=ROOT_PATH)))
+        self.store_button.setIcon(QIcon("{root}/_python/hooks_py_apps/save_selections/icons/add_grey1_24dp.png".format(root=root_path)))
+        self.load_button.setIcon(QIcon("{root}/_python/hooks_py_apps/save_selections/icons/load_grey1_24dp.png".format(root=root_path)))
+        self.actions_button.setIcon(QIcon("{root}/_python/hooks_py_apps/save_selections/icons/robot_grey1_24dp.png".format(root=root_path)))
+        self.remove_button.setIcon(QIcon("{root}/_python/hooks_py_apps/save_selections/icons/del_grey1_24dp.png".format(root=root_path)))
 
        # Popup menu
         self.menu = QtGui.QMenu(self)

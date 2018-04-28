@@ -1,13 +1,7 @@
 import os
+import sys
 import subprocess as sb
 
-# yaml need to be added into the Flame python's package thingy.
-import yaml
-
-# yaml config files:
-import ProjectPaths_layout
-import infoStaff_layout
-import ExportPresets_layout
 
 # PySide stuff, included with Flame default install.
 # quick and lazy import *
@@ -15,16 +9,26 @@ from PySide.QtCore import *
 from PySide.QtGui import *
 
 print '-' * 80
-print 'In customUIAction Hook:'
+print 'From CustomUIAction_Utilities:'
 
 
-# inherit absolute part of the path from the __init__.py file
-from __init__ import get_absolute_path_part
-ROOT_PATH = get_absolute_path_part()
+# turn the relative __file__ value into it's full path
+absolute_path = os.path.realpath(__file__)
+# Use the os module to split the filepath using '/' as a seperator to creates a list from which we pick IDs []
+root_path = '/'.join(absolute_path.split('/')[0:-4])
+# navigate down to the desired folder
+sys.path.append("{root}/_python/modules".format(root=root_path))
+print "Modules path: ", "{root}/_python/modules".format(root=root_path)
+import yaml
+
+# yaml config files:
+import ProjectPaths_layout
+import infoStaff_layout
+import ExportPresets_layout
 
 # Import the current config. Will be used later to setText (fileFullPath) in the ExportPresetsTab class
 #yaml_export_presets = '/opt/flame_dev/_python/hooks_py_apps/utilities/ExportPresets_result.yaml'
-yaml_export_presets = "{root}/_python/hooks_py_apps/utilities/ExportPresets_result.yaml".format(root=ROOT_PATH)
+yaml_export_presets = "{root}/_python/hooks_py_apps/utilities/ExportPresets_result.yaml".format(root=root_path)
 
 with open(yaml_export_presets, 'r') as config:
     cfg = yaml.load(config)
@@ -131,7 +135,7 @@ def customUIAction(info, userData):
 
 # ADDED 20170909 --- For the project path and name to show the actual config when opened ---------
                 #yaml_Pathnames_Path = '/opt/flame_dev/_python/hooks_py_apps/utilities/ProjectPaths_config_result.yaml'
-                yaml_Pathnames_Path = "{root}/_python/hooks_py_apps/utilities/ProjectPaths_config_result.yaml".format(root=ROOT_PATH)
+                yaml_Pathnames_Path = "{root}/_python/hooks_py_apps/utilities/ProjectPaths_config_result.yaml".format(root=root_path)
                 with open(yaml_Pathnames_Path, 'r') as config1:
                     cfg1 = yaml.load(config1)
                 projects_root_path = cfg1["projects_root_path"]
@@ -171,8 +175,8 @@ def customUIAction(info, userData):
                     'project_name': self.projectNameField.text(),
 
                 }
-                #with open('/opt/flame_dev/_python/hooks_py_apps/utilities/ProjectPaths_config_result.yaml', 'w') as export_hook_config:
-                with open("{root}/_python/hooks_py_apps/utilities/ProjectPaths_config_result.yaml".format(root=ROOT_PATH), 'w') as export_hook_config:
+                # with open('/opt/flame_dev/_python/hooks_py_apps/utilities/ProjectPaths_config_result.yaml', 'w') as export_hook_config:
+                with open("{root}/_python/hooks_py_apps/utilities/ProjectPaths_config_result.yaml".format(root=root_path), 'w') as export_hook_config:
                     export_hook_config.write(yaml.safe_dump(data))
 
         # Choose a set of export presets to be available in the Flame contextual menu.
@@ -266,8 +270,8 @@ def customUIAction(info, userData):
                         'name': self.preset05NameField.text(),
                     }
                 }
-                #with open('/opt/flame_dev/_python/hooks_py_apps/utilities/ExportPresets_result.yaml', 'w') as Export_Presets_config:
-                with open("{root}/_python/hooks_py_apps/utilities/ExportPresets_result.yaml".format(root=ROOT_PATH), 'w') as Export_Presets_config:
+                # with open('/opt/flame_dev/_python/hooks_py_apps/utilities/ExportPresets_result.yaml', 'w') as Export_Presets_config:
+                with open("{root}/_python/hooks_py_apps/utilities/ExportPresets_result.yaml".format(root=root_path), 'w') as Export_Presets_config:
                     Export_Presets_config.write(yaml.safe_dump(data))
 
         # Gives a set of names and emails that will conditionaly chosen (per export type, from 'export presets types') from within the custom export hook
@@ -318,8 +322,8 @@ def customUIAction(info, userData):
                     }
 
                 }
-                #with open('/opt/flame_dev/_python/hooks_py_apps/utilities/InfoStaff_config_result.yaml', 'w') as InfoStaff_config:
-                with open("{root}/_python/hooks_py_apps/utilities/InfoStaff_config_result.yaml".format(root=ROOT_PATH), 'w') as InfoStaff_config:
+                # with open('/opt/flame_dev/_python/hooks_py_apps/utilities/InfoStaff_config_result.yaml', 'w') as InfoStaff_config:
+                with open("{root}/_python/hooks_py_apps/utilities/InfoStaff_config_result.yaml".format(root=root_path), 'w') as InfoStaff_config:
                     InfoStaff_config.write(yaml.safe_dump(data))
 
         tabdialog = TabDialog()
@@ -352,7 +356,7 @@ def customUIAction(info, userData):
         pathstogether = '\n'.join(paths)
         print "Copying to clipboard: " + pathstogether
         qa.clipboard().setText(pathstogether)
-        # All Wiretap clients must end with a call to the WireTapClientUninit global function 
+        # All Wiretap clients must end with a call to the WireTapClientUninit global function
         # or destroy the WireTapClient guard object.
         # > Crashes Flame though.
         # wt.WireTapClientUninit()
@@ -556,5 +560,5 @@ def customUIAction(info, userData):
         sb.Popen('/Applications/Natron.app/Contents/MacOS/Natron')
 
 
-print '- End of customUIAction Hook:'
+print '- End of CustomUIAction_Utilities:'
 print '-' * 80

@@ -16,7 +16,7 @@ def main(shotname, elementname):
     # import modules from a specific place (VFX pipeline's central folder for all python modules)
     global sys
     import sys
-    sys.path.append('/Users/stefan/XenDrive/___VFX/DEV/PYTHON/Modules/')
+    # sys.path.append('/Users/stefan/XenDrive/___VFX/DEV/PYTHON/Modules/')
 
     # now we can import the modules previously declared as global (Because of the exec function behaviour)
     global os
@@ -24,7 +24,15 @@ def main(shotname, elementname):
     global clique
     import clique
 
-    # Declare global variables: PROJECT NAME + SHOT NUMBER
+    # turn the relative __file__ value into it's full path
+    absolute_path = os.path.realpath(__file__)
+    # Use the os module to split the filepath using '/' as a seperator to creates a list from which we pick IDs []
+    root_path = '/'.join(absolute_path.split('/')[0:-4])
+    # navigate down to the desired folder
+    sys.path.append("{root}/_python/modules".format(root=root_path))
+    print "{root}/_python/modules".format(root=root_path)
+
+# Declare global variables: PROJECT NAME + SHOT NUMBER
     global projectName
     projectName = '17P998_python_console'
 
@@ -65,8 +73,11 @@ def main(shotname, elementname):
 
     def get_shot_folders(project_name):
         all_paths = []
-        project_root = r'/opt/flame_dev/house_projects/{project_name}/shots'.format(project_name=project_name)
-        print "Project's root 'shots' folder on server: " + project_root
+        #project_root = r'/opt/flame_dev/house_projects/{project_name}/shots'.format(project_name=project_name)
+        # NEXT TIME TRY THIS >>>>>>>>>>>>>>
+        project_root = "{root}/house_projects/{project_name}/shots".format(root=root_path, project_name=project_name)
+
+        print "From_mvr_back_to_beauty >Project's root 'shots' folder on server: " + project_root
         print ''
         print 'FILES FOUND (Filepaths): '
 

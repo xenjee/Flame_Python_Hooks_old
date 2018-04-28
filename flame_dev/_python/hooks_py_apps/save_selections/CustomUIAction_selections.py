@@ -4,6 +4,7 @@
 # 2017/11/03
 
 from PySide.QtGui import QApplication
+import os
 import sys
 
 # UI
@@ -11,13 +12,14 @@ import save_Load_selections_UI_04c
 reload(save_Load_selections_UI_04c)
 from save_Load_selections_UI_04c import SelectionsWidget
 
-# inherit absolute part of the path from the __init__.py file
-from __init__ import get_absolute_path_part
-ROOT_PATH = get_absolute_path_part()
 
-# Modules Paths
-#sys.path.append('/opt/flame_dev/_python/modules')
-sys.path.append("{root}/_python/modules".format(root=ROOT_PATH))
+# turn the relative __file__ value into it's full path
+absolute_path = os.path.realpath(__file__)
+# Use the os module to split the filepath using '/' as a seperator to creates a list from which we pick IDs []
+root_path = '/'.join(absolute_path.split('/')[0:-4])
+# navigate down to the desired folder
+sys.path.append("{root}/_python/modules".format(root=root_path))
+#print "{root}/_python/modules".format(root=root_path)
 
 
 # Contextuel Menu Entry
@@ -43,7 +45,7 @@ def customUIAction(info, userData):
             return ["" + s.name + "" for s in flame.batch.selected_nodes.get_value()]
 
         #yamlpath = '/opt/flame_dev/_python/hooks_py_apps/save_selections/saved_nodes.yaml'
-        yamlpath = "{root}/_python/hooks_py_apps/save_selections/saved_nodes.yaml".format(root=ROOT_PATH)
+        yamlpath = "{root}/_python/hooks_py_apps/save_selections/saved_nodes.yaml".format(root=root_path)
 
     #############################################
 

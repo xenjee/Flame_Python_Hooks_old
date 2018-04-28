@@ -18,13 +18,20 @@
 from PySide.QtCore import *
 from PySide.QtGui import *
 from PySide import QtCore, QtGui
+import os
 import sys
 import subprocess
 from icons_rc import *
 
-# Modules Paths
-sys.path.append('/Users/stefan/XenDrive/___VFX/DEV/PYTHON/Modules')
-sys.path.append('/opt/flame_dev/_python/modules')
+
+# turn the relative __file__ value into it's full path
+absolute_path = os.path.realpath(__file__)
+# Use the os module to split the filepath using '/' as a seperator to creates a list from which we pick IDs []
+root_path = '/'.join(absolute_path.split('/')[0:-4])
+# navigate down to the desired folder
+sys.path.append("{root}/_python/modules".format(root=root_path))
+#print "{root}/_python/modules".format(root=root_path)
+import yaml
 
 
 # UIs

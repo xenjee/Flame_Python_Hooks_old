@@ -1,9 +1,13 @@
 import os
 import subprocess as sb
+import sys
 
-# inherit absolute part of the path from the __init__.py file
-from __init__ import get_absolute_path_part
-ROOT_PATH = get_absolute_path_part()
+# turn the relative __file__ value into it's full path
+absolute_path = os.path.realpath(__file__)
+# Use the os module to split the filepath using '/' as a seperator to creates a list from which we pick IDs []
+root_path = '/'.join(absolute_path.split('/')[0:-4])
+
+print "root_path: ", root_path
 
 
 def getCustomUIActions():
@@ -38,7 +42,7 @@ def customUIAction(info, userData):
         # def expressions_sheet1():
 
         #file_path = '/opt/flame_dev/_python/hooks_py_apps/toolkit/docs/Expressions_particles_reformated.txt'
-        file_path = "{root}/_python/hooks_py_apps/toolkit/docs/Expressions_particles_reformated.txt".format(root=ROOT_PATH)
+        file_path = "{root}/_python/hooks_py_apps/toolkit/docs/Expressions_particles_reformated.txt".format(root=root_path)
         print file_path
         print "-" * 20
         sb.call(["open", file_path])

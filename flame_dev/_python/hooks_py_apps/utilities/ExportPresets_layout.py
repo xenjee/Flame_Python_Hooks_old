@@ -8,7 +8,6 @@
 
 from PySide.QtCore import *
 from PySide.QtGui import *
-print "Using: PySide in layout"
 import sys
 
 
