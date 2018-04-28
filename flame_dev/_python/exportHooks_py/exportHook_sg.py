@@ -42,20 +42,25 @@ absolute_path = os.path.realpath(__file__)
 root_path = '/'.join(absolute_path.split('/')[0:-3])
 # navigate down to the desired folder
 sys.path.append("{root}/_python/modules".format(root=root_path))
-#print "{root}/_python/modules".format(root=root_path)
+# print "{root}/_python/modules".format(root=root_path)
 import yaml
 
 
 # --------------
 # IMPORT YAML CONFIG FILES>
+print "From exportHook_sg.py:"
 yaml_Pathnames_Path = "{root}/_python/hooks_py_apps/utilities/ProjectPaths_config_result.yaml".format(root=root_path)
 yaml_Staff = "{root}/_python/hooks_py_apps/utilities/InfoStaff_config_result.yaml".format(root=root_path)
 yamlGmail = '/Users/stefan/Dropbox/STEF/yaml_gmail/yamlGmail.yaml'
 yaml_export_presets = "{root}/_python/hooks_py_apps/utilities/ExportPresets_result.yaml".format(root=root_path)
+print "yaml_Pathnames_Path: ", yaml_Pathnames_Path
+print "yaml_Staff: ", yaml_Staff
+print "yaml_export_presets: ", yaml_export_presets
 
 
 with open(yaml_Pathnames_Path, 'r') as config1:
     cfg1 = yaml.load(config1)
+
 
 with open(yaml_Staff, 'r') as config2:
     cfg2 = yaml.load(config2)
